@@ -31,7 +31,7 @@ export default function MainLayout() {
               <li className="nav-item">
                 <Link className="nav-link" to="/" onClick={() => setIsOpen(false)}>Home</Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link className="nav-link" to="/alphabet" onClick={() => setIsOpen(false)}>Alphabet</Link>
               </li>
               <li className="nav-item">
@@ -42,7 +42,7 @@ export default function MainLayout() {
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/todayPlan" onClick={() => setIsOpen(false)}>TodayPlan</Link>
-              </li>
+              </li> */}
             </ul>
           </div>
         </nav>
