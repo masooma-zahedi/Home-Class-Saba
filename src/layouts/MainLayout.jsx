@@ -69,10 +69,10 @@ export default function MainLayout() {
           <div className="col-md-4">
             <h5>Quick Links</h5>
             <ul className="list-unstyled">
-              <li><Link className="text-white" to={'/alphabet'} >Alphabet</Link></li>
-              <li><Link className="text-white" to={'/word'} >Word</Link></li>
-              <li><Link className="text-white" to={'/story'} >Story</Link></li>
-              <li><Link className="text-white" to={'/'} >Contact</Link></li>
+              <li><Link className="text-white" to={''} >Alphabet</Link></li>
+              <li><Link className="text-white" to={''} >Word</Link></li>
+              <li><Link className="text-white" to={''} >Story</Link></li>
+              <li><Link className="text-white" to={''} >Contact</Link></li>
             </ul>
           </div>
           <div className="col-md-4">
