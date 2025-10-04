@@ -29,7 +29,7 @@ export default function MainLayout() {
           <div className={`collapse navbar-collapse ${isOpen ? "show" : ""}`}>
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
-                <Link className="nav-link" to="/" onClick={() => setIsOpen(false)}>Home</Link>
+                <Link className="nav-link" to="" onClick={() => setIsOpen(false)}>Home</Link>
               </li>
               {/* <li className="nav-item">
                 <Link className="nav-link" to="/alphabet" onClick={() => setIsOpen(false)}>Alphabet</Link>
