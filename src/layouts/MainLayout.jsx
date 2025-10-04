@@ -35,13 +35,13 @@ export default function MainLayout() {
                 <Link className="nav-link" to="/Home-Class-Saba/" onClick={() => setIsOpen(false)}>Alphabet</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="" onClick={() => setIsOpen(false)}>Word</Link>
+                <Link className="nav-link" to="/Home-Class-Saba/" onClick={() => setIsOpen(false)}>Word</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="" onClick={() => setIsOpen(false)}>Story</Link>
+                <Link className="nav-link" to="/Home-Class-Saba/" onClick={() => setIsOpen(false)}>Story</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="" onClick={() => setIsOpen(false)}>TodayPlan</Link>
+                <Link className="nav-link" to="/Home-Class-Saba/" onClick={() => setIsOpen(false)}>TodayPlan</Link>
               </li>
             </ul>
           </div>
@@ -69,10 +69,10 @@ export default function MainLayout() {
           <div className="col-md-4">
             <h5>Quick Links</h5>
             <ul className="list-unstyled">
-              <li><Link className="text-white" to={''} >Alphabet</Link></li>
-              <li><Link className="text-white" to={''} >Word</Link></li>
-              <li><Link className="text-white" to={''} >Story</Link></li>
-              <li><Link className="text-white" to={''} >Contact</Link></li>
+              <li><Link className="text-white" to={'/Home-Class-Saba/'} >Alphabet</Link></li>
+              <li><Link className="text-white" to={'/Home-Class-Saba/'} >Word</Link></li>
+              <li><Link className="text-white" to={'/Home-Class-Saba/'} >Story</Link></li>
+              <li><Link className="text-white" to={'/Home-Class-Saba/'} >Contact</Link></li>
             </ul>
           </div>
           <div className="col-md-4">
