@@ -31,18 +31,18 @@ export default function MainLayout() {
               <li className="nav-item">
                 <Link className="nav-link" to="" onClick={() => setIsOpen(false)}>Home</Link>
               </li>
-              {/* <li className="nav-item">
-                <Link className="nav-link" to="/alphabet" onClick={() => setIsOpen(false)}>Alphabet</Link>
+              <li className="nav-item">
+                <Link className="nav-link" to="" onClick={() => setIsOpen(false)}>Alphabet</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/word" onClick={() => setIsOpen(false)}>Word</Link>
+                <Link className="nav-link" to="" onClick={() => setIsOpen(false)}>Word</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/Story" onClick={() => setIsOpen(false)}>Story</Link>
+                <Link className="nav-link" to="" onClick={() => setIsOpen(false)}>Story</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/todayPlan" onClick={() => setIsOpen(false)}>TodayPlan</Link>
-              </li> */}
+                <Link className="nav-link" to="" onClick={() => setIsOpen(false)}>TodayPlan</Link>
+              </li>
             </ul>
           </div>
         </nav>
