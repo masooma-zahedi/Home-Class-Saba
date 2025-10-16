@@ -11,8 +11,8 @@ export default function Home() {
     <SpellingGame/>
     <StoryPage3 groupKey="alefba" wantedTitle="خارپُشت وَ پاییز" goalGroup="" />
 
-    <SentenceBuilder/>
-    <SortableSentencesApp/>
+    {/* <SentenceBuilder/> */}
+    {/* <SortableSentencesApp/> */}
     {/* <StoryPage3 groupKey="kalemat" wantedTitle="باغِ وَحش" goalGroup="گروه کلمات"/> */}
     {/* <WordGameWithCategories initialCategory="وسایل مدرسه" /> */}
   </div>
