@@ -9,7 +9,7 @@ export default function MainLayout() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <div className="d-flex flex-column min-vh-100">
+    <div className="d-flex flex-column min-vh-100 contaiener">
       {/* هدر */}
       <header className="bg-success text-white">
         <nav className="navbar navbar-expand-lg navbar-dark container">
@@ -53,7 +53,7 @@ export default function MainLayout() {
       </header>
 
       {/* محتوای صفحه */}
-      <main className="flex-fill container p-0 border border-danger my-4">
+      <main className="flex-fill container p-1 my-4">
         {/* <Outlet /> */}
         <Home/>
       </main>
