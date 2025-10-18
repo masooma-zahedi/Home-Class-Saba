@@ -4,6 +4,7 @@ import WordGameWithCategories from "../sections/alphabet/WordGameWithCategories"
 import SpellingGame from "../sections/alphabet/SpellingGame";
 import SentenceBuilder from "../sections/word/SentenceBuilder";
 import SortableSentencesApp from "../sections/word/SortableSentencesApp";
+import DragDropQuiz from "../sections/word/DragDropQuiz";
 
 export default function Home() {
   return (<>
@@ -11,6 +12,7 @@ export default function Home() {
     <div className="h5 container bg-info m-3 rounded text-center p-3">بچه ها از روی داستان بخوانند و تا بالای عکس را بنویسند. و گروه کلمات املای کلمات داده شده در پایین را یاد بگیرند و فعالیت  آن را تمرین کنند .</div>
     <StoryPage3 groupKey="alefba" wantedTitle="خارپُشت وَ پاییز" goalGroup="" />
     <SpellingGame/>
+    <DragDropQuiz/>
 
     {/* <SentenceBuilder/> */}
     {/* <SortableSentencesApp/> */}
