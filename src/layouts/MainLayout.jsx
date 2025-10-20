@@ -2,14 +2,16 @@ import React, { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from "../pages/Home";
+import BiographySlide from "./BiographySlide";
 
 export default function MainLayout() {
   const [isOpen, setIsOpen] = useState(false);
+  const [showContact,setShowContact] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <div className="d-flex flex-column min-vh-100 contaiener">
+    <div className="d-flex flex-column min-vh-100">
       {/* هدر */}
       <header className="bg-success text-white">
         <nav className="navbar navbar-expand-lg navbar-dark container">
@@ -29,20 +31,23 @@ export default function MainLayout() {
           <div className={`collapse navbar-collapse ${isOpen ? "show" : ""}`}>
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
-                <Link className="nav-link" to="/Home-Class-Saba/" onClick={() => setIsOpen(false)}>Home</Link>
+                <Link className="nav-link" to="/Home-ClassA/" onClick={() => setIsOpen(false)}>Home</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/Home-Class-Saba/" onClick={() => setIsOpen(false)}>Alphabet</Link>
+                <span className="nav-link" style={{cursor:"pointer"}} onClick={()=>setShowContact(!showContact)}>contact</span>
+              </li>
+              {/* <li className="nav-item">
+                <Link className="nav-link" to="/Home-ClassA/" onClick={() => setIsOpen(false)}>Alphabet</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/Home-Class-Saba/" onClick={() => setIsOpen(false)}>Word</Link>
+                <Link className="nav-link" to="/Home-ClassA/" onClick={() => setIsOpen(false)}>Word</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/Home-Class-Saba/" onClick={() => setIsOpen(false)}>Story</Link>
+                <Link className="nav-link" to="/Home-ClassA/" onClick={() => setIsOpen(false)}>Story</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/Home-Class-Saba/" onClick={() => setIsOpen(false)}>TodayPlan</Link>
-              </li>
+                <Link className="nav-link" to="/Home-ClassA/" onClick={() => setIsOpen(false)}>TodayPlan</Link>
+              </li> */}
             </ul>
           </div>
         </nav>
@@ -53,8 +58,10 @@ export default function MainLayout() {
       </header>
 
       {/* محتوای صفحه */}
-      <main className="flex-fill container p-1 my-4">
+      <main className="flex-fill container p-0 border border-danger my-4">
         {/* <Outlet /> */}
+        {showContact && <BiographySlide/> }
+        
         <Home/>
       </main>
 
@@ -69,10 +76,12 @@ export default function MainLayout() {
           <div className="col-md-4">
             <h5>Quick Links</h5>
             <ul className="list-unstyled">
-              <li><Link className="text-white" to={'/Home-Class-Saba/'} >Alphabet</Link></li>
-              <li><Link className="text-white" to={'/Home-Class-Saba/'} >Word</Link></li>
-              <li><Link className="text-white" to={'/Home-Class-Saba/'} >Story</Link></li>
-              <li><Link className="text-white" to={'/Home-Class-Saba/'} >Contact</Link></li>
+              <li><Link className="text-white" to={'/Home-ClassA/'} >Alphabet</Link></li>
+              <li><Link className="text-white" to={'/Home-ClassA/'} >Word</Link></li>
+              <li><Link className="text-white" to={'/Home-ClassA/'} >Story</Link></li>
+              <li className="nav-item">
+                <span className="nav-link" style={{cursor:"pointer"}} onClick={()=>setShowContact(!showContact)}>contact</span>
+              </li>
             </ul>
           </div>
           <div className="col-md-4">
