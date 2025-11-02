@@ -6,25 +6,29 @@ import SentenceBuilder from "../sections/word/SentenceBuilder";
 import SortableSentencesApp from "../sections/word/SortableSentencesApp";
 import DragDropQuiz from "../sections/word/DragDropQuiz";
 import SentenceObject from "../sections/word/SentenceObject";
+import ObjectSentenceGame from "../sections/alphabet/ObjectSentenceGame";
 
 export default function Home() {
   return (<>
   <div  className="">
-    <div className="h5 container bg-info m-2 rounded text-center p-3">گروه الفبا جملات صبحانه را بخوانند و از روی 5 جمله آن بنویسند. گروه کلمات داستان را بخوانند و تا بالای عکس بنویسند</div>
+    <div className="h5 container bg-info m-2 rounded text-center p-3">گروه الفبا جملات زیر را تمرین کنند و از روی 7 جمله جواب درست آن بنویسند. گروه کلمات جملات را مرتب و از روی 7 جمله درست آن بنویسند. </div>
 
 
     {/* <StoryPage3 groupKey="alefba" wantedTitle="پیک نیک" goalGroup="" /> */}
     {/* <SpellingGame/> */}
-    
-    <SentenceObject/>
+    <ObjectSentenceGame/>
+    {/* <SentenceObject/> */}
 
     {/* <DragDropQuiz/> */}
 
-    {/* <SentenceBuilder/> */}
+    <SentenceBuilder/>
     {/* <SortableSentencesApp/> */}
-    <StoryPage3 groupKey="kalemat" wantedTitle="پیک نیک" goalGroup="گروه کلمات"/>
-    <StoryPage3 groupKey="dastan" wantedTitle="مرغ ماهی‌خوار و ماهی" goalGroup="گروه داستان"/>
+    {/* <StoryPage3 groupKey="kalemat" wantedTitle="پیک نیک" goalGroup="گروه کلمات"/> */}
     {/* <WordGameWithCategories initialCategory="وسایل مدرسه" /> */}
+
+
+
+    <StoryPage3 groupKey="dastan" wantedTitle="زنبورها در اکوسیستم‌ها" goalGroup="گروه داستان"/>
   </div>
 
   </>)

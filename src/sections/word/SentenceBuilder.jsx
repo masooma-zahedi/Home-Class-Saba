@@ -1,7 +1,5 @@
-// SentenceBuilder.jsx
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
 
 // تابع شافل کردن آرایه
 const shuffleArray = (array) => {
@@ -13,85 +11,465 @@ const shuffleArray = (array) => {
   return shuffled;
 };
 
-// کمک برای بازگرداندن آرایه با ترتیب جدید بعد از درگ
-const reorder = (list, startIndex, endIndex) => {
-  const result = Array.from(list);
-  const [removed] = result.splice(startIndex, 1);
-  result.splice(endIndex, 0, removed);
-  return result;
-};
-
 const SentenceBuilder = () => {
+  // داده‌های نمونه
   const sentenceData = {
-    داستان_یپک_نیک: [
-      {
-        fa: ["یک", "روز", "آفتابی", "لیلا", "و", "مکس", "به", "سفر", "رفتند"],
-        correctFa: ["یک", "روز", "آفتابی", "لیلا", "و", "مکس", "به", "سفر", "رفتند"],
-        en: "One sunny day, Leila and Max went on a trip.",
-        image: ""
-      },
-      {
-        fa: ["پدر", "و", "مادر", "لیلا", "و", "مکس", "خوراکی", "و", "اسباب‌بازی", "در", "ماشین", "گذاشتند"],
-        correctFa: ["پدر", "و", "مادر", "لیلا", "و", "مکس", "خوراکی", "و", "اسباب‌بازی", "در", "ماشین", "گذاشتند"],
-        en: "Leila and Max’s parents put snacks and toys in the car.",
-        image: ""
-      },
-      // ... (باقی جملات همان‌طور که در نسخه‌ی شماست)
-    ]
+  //   داستان_روباه2: [
+  //   {
+  //     fa: ["روباه", "کنار", "رود", "زندگی", "می‌کند"],
+  //     correctFa: ["روباه", "کنار", "رود", "زندگی", "می‌کند"],
+  //     en: "The fox lives by the river"
+  //   },
+  //   {
+  //     fa: ["روباه", "هر", "روز", "آب", "می‌نوشد"],
+  //     correctFa: ["روباه", "هر", "روز", "آب", "می‌نوشد"],
+  //     en: "The fox drinks water every day"
+  //   },
+  //   {
+  //     fa: ["یک", "روز", "رنگین‌کمان", "آمد"],
+  //     correctFa: ["یک", "روز", "رنگین‌کمان", "آمد"],
+  //     en: "One day a rainbow came"
+  //   },
+  //   {
+  //     fa: ["روباه", "گفت", "چه", "رنگ‌های", "زیبایی"],
+  //     correctFa: ["روباه", "گفت", "چه", "رنگ‌های", "زیبایی"],
+  //     en: "The fox said what beautiful colors"
+  //   },
+  //   {
+  //     fa: ["روباه", "خواست", "رنگین‌کمان","را", "ببیند"],
+  //     correctFa: ["روباه", "خواست", "رنگین‌کمان","را", "ببیند"],
+  //     en: "The fox wanted to see the rainbow"
+  //   },
+  //   {
+  //     fa: ["رود", "آب", "و", "سنگ", "داشت"],
+  //     correctFa: ["رود", "آب", "و", "سنگ", "داشت"],
+  //     en: "The river had water and stones"
+  //   },
+  //   {
+  //     fa: ["روباه", "فکر", "کرد"],
+  //     correctFa: ["روباه", "فکر", "کرد"],
+  //     en: "The fox thought"
+  //   },
+  //   {
+  //     fa: ["روباه", "گفت", "باید", "از", "پل", "بروم"],
+  //     correctFa: ["روباه", "گفت", "باید", "از", "پل", "بروم"],
+  //     en: "The fox said I must go over the bridge"
+  //   },
+  //   {
+  //     fa: ["روباه", "پل","را", "پیدا", "کرد"],
+  //     correctFa: ["روباه", "پل","را", "پیدا", "کرد"],
+  //     en: "The fox found the bridge"
+  //   },
+  //   {
+  //     fa: ["روباه", "از", "پل", "گذشت"],
+  //     correctFa: ["روباه", "از", "پل", "گذشت"],
+  //     en: "The fox crossed the bridge"
+  //   },
+  //   {
+  //     fa: ["روباه", "رنگین‌کمان","را", "دید"],
+  //     correctFa: ["روباه", "رنگین‌کمان","را", "دید"],
+  //     en: "The fox saw the rainbow"
+  //   },
+  //   {
+  //     fa: ["روباه", "خوشحال", "شد"],
+  //     correctFa: ["روباه", "خوشحال", "شد"],
+  //     en: "The fox became happy"
+  //   },
+  //   {
+  //     fa: ["روباه", "گفت", "من", "باهوش", "هستم"],
+  //     correctFa: ["روباه", "گفت", "من", "باهوش", "هستم"],
+  //     en: "The fox said I am clever"
+  //   },
+  //   {
+  //     fa: ["روباه", "هر", "روز","به طَرَفِ", "رود", "می‌رود"],
+  //     correctFa: ["روباه", "هر", "روز","به طَرَفِ", "رود", "می‌رود"],
+  //     en: "The fox goes to the river every day"
+  //   },
+  //   {
+  //     fa: ["روباه", "خوشحال", "است"],
+  //     correctFa: ["روباه", "خوشحال", "است"],
+  //     en: "The fox is happy"
+  //   },
+  // ],
+  //   داستان_روباه: [
+  //     {
+  //       fa: ["یک", "روباه", "باهوش", "کنار", "رودخانه", "زندگی", "می‌کرد"],
+  //       correctFa: ["یک", "روباه", "باهوش", "کنار", "رودخانه", "زندگی", "می‌کرد"],
+  //       en: "A clever fox lived beside a river"
+  //     },
+  //     {
+  //       fa: ["روباه", "هر", "روز", "به", "کنار", "رود", "می‌رفت", "و", "آب", "می‌نوشید"],
+  //       correctFa: ["روباه", "هر", "روز", "به", "کنار", "رود", "می‌رفت", "و", "آب", "می‌نوشید"],
+  //       en: "The fox went to the river every day and drank water"
+  //     },
+  //     {
+  //       fa: ["یک", "روز", "رنگین‌کمان", "زیبایی", "در", "آسمان", "پدیدار", "شد"],
+  //       correctFa: ["یک", "روز", "رنگین‌کمان", "زیبایی", "در", "آسمان", "پدیدار", "شد"],
+  //       en: "One day a beautiful rainbow appeared in the sky"
+  //     },
+  //     {
+  //       fa: ["روباه", "گفت", "به‌به", "چه", "رنگ‌های", "قشنگی"],
+  //       correctFa: ["روباه", "گفت", "به‌به", "چه", "رنگ‌های", "قشنگی"],
+  //       en: "The fox said wow, what beautiful colors"
+  //     },
+  //     {
+  //       fa: ["روباه", "خواست", "از", "روی", "رودخانه", "عبور", "کند"],
+  //       correctFa: ["روباه", "خواست", "از", "روی", "رودخانه", "عبور", "کند"],
+  //       en: "The fox wanted to cross the river"
+  //     },
+  //     {
+  //       fa: ["رودخانه", "پر", "از", "سنگ", "و", "آب", "بود"],
+  //       correctFa: ["رودخانه", "پر", "از", "سنگ", "و", "آب", "بود"],
+  //       en: "The river was full of stones and water"
+  //     },
+  //     {
+  //       fa: ["روباه", "خیلی", "فکر", "کرد"],
+  //       correctFa: ["روباه", "خیلی", "فکر", "کرد"],
+  //       en: "The fox thought a lot"
+  //     },
+  //     {
+  //       fa: ["روباه", "گفت", "راه", "درست", "عبور", "از", "پل", "است"],
+  //       correctFa: ["روباه", "گفت", "راه", "درست", "عبور", "از", "پل", "است"],
+  //       en: "The fox said the right way is to cross the bridge"
+  //     },
+  //     {
+  //       fa: ["روباه", "پل", "را", "پیدا", "کرد"],
+  //       correctFa: ["روباه", "پل", "را", "پیدا", "کرد"],
+  //       en: "The fox found the bridge"
+  //     },
+  //     {
+  //       fa: ["روباه", "از", "روی", "پل", "عبور", "کرد"],
+  //       correctFa: ["روباه", "از", "روی", "پل", "عبور", "کرد"],
+  //       en: "The fox crossed the bridge"
+  //     },
+  //     {
+  //       fa: ["روباه", "رنگین‌کمان", "را", "از", "طرف", "دیگر", "دید"],
+  //       correctFa: ["روباه", "رنگین‌کمان", "را", "از", "طرف", "دیگر", "دید"],
+  //       en: "The fox saw the rainbow from the other side"
+  //     },
+  //     {
+  //       fa: ["روباه", "خیلی", "خوشحال", "شد"],
+  //       correctFa: ["روباه", "خیلی", "خوشحال", "شد"],
+  //       en: "The fox became very happy"
+  //     },
+  //     {
+  //       fa: ["روباه", "گفت", "من", "روباه", "زیرکم"],
+  //       correctFa: ["روباه", "گفت", "من", "روباه", "زیرکم"],
+  //       en: "The fox said I am a clever fox"
+  //     },
+  //     {
+  //       fa: ["روباه", "هر", "روز", "به", "رودخانه", "می‌رفت"],
+  //       correctFa: ["روباه", "هر", "روز", "به", "رودخانه", "می‌رفت"],
+  //       en: "The fox went to the river every day"
+  //     },
+  //     {
+  //       fa: ["روباه", "از", "زندگی", "خود", "راضی", "بود"],
+  //       correctFa: ["روباه", "از", "زندگی", "خود", "راضی", "بود"],
+  //       en: "The fox was happy with his life"
+  //     },
+  //   ],
+  //   برادر_کوچک_من: [
+  //     {
+  //       fa: ["یک", "روز", "صبح", "مادر", "مرا", "صدا", "زد"],
+  //       correctFa: ["یک", "روز", "صبح", "مادر", "مرا", "صدا", "زد"],
+  //       en: "One morning, mother called me"
+  //     },
+  //     {
+  //       fa: ["مادر", "گفت", "برادرت", "بیدار", "شده", "است"],
+  //       correctFa: ["مادر", "گفت", "برادرت", "بیدار", "شده", "است"],
+  //       en: "Mother said your brother is awake"
+  //     },
+  //     {
+  //       fa: ["من", "به", "اتاق", "برادرم", "رفتم"],
+  //       correctFa: ["من", "به", "اتاق", "برادرم", "رفتم"],
+  //       en: "I went to my brother's room"
+  //     },
+  //     {
+  //       fa: ["برادرم", "نوید", "روی", "تختش", "در", "حال", "خوابیدن", "بود"],
+  //       correctFa: ["برادرم", "نوید", "روی", "تختش", "در", "حال", "خوابیدن", "بود"],
+  //       en: "My brother Navid was lying on his bed"
+  //     },
+  //     {
+  //       fa: ["او", "با", "چشم‌های", "درشت", "به", "من", "نگاه", "کرد"],
+  //       correctFa: ["او", "با", "چشم‌های", "درشت", "به", "من", "نگاه", "کرد"],
+  //       en: "He looked at me with big eyes"
+  //     },
+  //     {
+  //       fa: ["من", "به", "او", "لبخند", "زدم"],
+  //       correctFa: ["من", "به", "او", "لبخند", "زدم"],
+  //       en: "I smiled at him"
+  //     },
+  //     {
+  //       fa: ["نوید", "دست", "کوچکش", "را", "بالا", "آورد"],
+  //       correctFa: ["نوید", "دست", "کوچکش", "را", "بالا", "آورد"],
+  //       en: "Navid raised his small hand"
+  //     },
+  //     {
+  //       fa: ["من", "دست", "او", "را", "گرفتم"],
+  //       correctFa: ["من", "دست", "او", "را", "گرفتم"],
+  //       en: "I held his hand"
+  //     },
+  //     {
+  //       fa: ["به", "برادرم", "گفتم", "من", "برادر", "بزرگت", "هستم"],
+  //       correctFa: ["به", "برادرم", "گفتم", "من", "برادر", "بزرگت", "هستم"],
+  //       en: "I told my brother I am your big brother"
+  //     },
+  //     {
+  //       fa: ["مادر", "گفت", "برای", "نوید", "قصه", "بخوان"],
+  //       correctFa: ["مادر", "گفت", "برای", "نوید", "قصه", "بخوان"],
+  //       en: "Mother said read a story for Navid"
+  //     },
+  //     {
+  //       fa: ["من", "کنار", "تخت", "نشستم", "و", "قصه", "شروع", "کردم"],
+  //       correctFa: ["من", "کنار", "تخت", "نشستم", "و", "قصه", "شروع", "کردم"],
+  //       en: "I sat beside the bed and started the story"
+  //     },
+  //     {
+  //       fa: ["نوید", "با", "صدای", "کوچکش", "جواب", "داد"],
+  //       correctFa: ["نوید", "با", "صدای", "کوچکش", "جواب", "داد"],
+  //       en: "Navid answered with his little voice"
+  //     },
+  //     {
+  //       fa: ["مادر", "گفت", "او", "با", "تو", "حرف", "می‌زند"],
+  //       correctFa: ["مادر", "گفت", "او", "با", "تو", "حرف", "می‌زند"],
+  //       en: "Mother said he is talking to you"
+  //     },
+  //     {
+  //       fa: ["من", "برای", "نوید", "آواز", "خواندم"],
+  //       correctFa: ["من", "برای", "نوید", "آواز", "خواندم"],
+  //       en: "I sang a song for Navid"
+  //     },
+  //     {
+  //       fa: ["من", "همیشه", "مراقب", "برادرم", "خواهم", "بود"],
+  //       correctFa: ["من", "همیشه", "مراقب", "برادرم", "خواهم", "بود"],
+  //       en: "I will always take care of my brother"
+  //     }
+  //   ],
+    داستان_یپک_نیک : [
+  {
+    fa: ["یک", "روز", "آفتابی", "لیلا", "و", "مکس", "به", "سفر", "رفتند"],
+    correctFa: ["یک", "روز", "آفتابی", "لیلا", "و", "مکس", "به", "سفر", "رفتند"],
+    en: "One sunny day, Leila and Max went on a trip.",
+    image: ""
+  },
+  {
+    fa: ["پدر", "و", "مادر", "لیلا", "و", "مکس", "خوراکی", "و", "اسباب‌بازی", "در", "ماشین", "گذاشتند"],
+    correctFa: ["پدر", "و", "مادر", "لیلا", "و", "مکس", "خوراکی", "و", "اسباب‌بازی", "در", "ماشین", "گذاشتند"],
+    en: "Leila and Max’s parents put snacks and toys in the car.",
+    image: ""
+  },
+  {
+    fa: ["لیلا", "در", "راه", "گل‌های", "رنگی", "دید"],
+    correctFa: ["لیلا", "در", "راه", "گل‌های", "رنگی", "دید"],
+    en: "Leila saw colorful flowers on the way.",
+    image: ""
+  },
+  {
+    fa: ["مکس", "اردک‌ها", "را", "در", "برکه", "دید"],
+    correctFa: ["مکس", "اردک‌ها", "را", "در", "برکه", "دید"],
+    en: "Max saw ducks in the pond.",
+    image: ""
+  },
+  {
+    fa: ["لیلا", "و", "مکس", "آواز", "خواندند", "و", "خندیدند"],
+    correctFa: ["لیلا", "و", "مکس", "آواز", "خواندند", "و", "خندیدند"],
+    en: "Leila and Max sang and laughed.",
+    image: ""
+  },
+  {
+    fa: ["آن‌ها", "کنار", "جنگل", "پیک‌نیک", "کردند"],
+    correctFa: ["آن‌ها", "کنار", "جنگل", "پیک‌نیک", "کردند"],
+    en: "They had a picnic by the forest.",
+    image: ""
+  },
+  {
+    fa: ["لیلا", "و", "مکس", "ساندویچ", "و", "سیب", "خوردند"],
+    correctFa: ["لیلا", "و", "مکس", "ساندویچ", "و", "سیب", "خوردند"],
+    en: "Leila and Max ate sandwiches and apples.",
+    image: ""
+  },
+  {
+    fa: ["پرنده‌ها", "در", "جنگل", "آواز", "می‌خواندند"],
+    correctFa: ["پرنده‌ها", "در", "جنگل", "آواز", "می‌خواندند"],
+    en: "The birds were singing in the forest.",
+    image: ""
+  },
+  {
+    fa: ["آن‌ها", "یک", "سنجاب", "دیدند", "که", "فندق", "می‌خورد"],
+    correctFa: ["آن‌ها", "یک", "سنجاب", "دیدند", "که", "فندق", "می‌خورد"],
+    en: "They saw a squirrel eating a nut.",
+    image: ""
+  },
+  {
+    fa: ["لیلا", "و", "مکس", "به", "دریاچه", "رسیدند"],
+    correctFa: ["لیلا", "و", "مکس", "به", "دریاچه", "رسیدند"],
+    en: "Leila and Max arrived at the lake.",
+    image: ""
+  },
+  {
+    fa: ["آب", "در", "دریاچه", "می‌درخشید"],
+    correctFa: ["آب", "در", "دریاچه", "می‌درخشید"],
+    en: "The water in the lake was shining.",
+    image: ""
+  },
+  {
+    fa: ["لیلا", "سنگ‌ها", "را", "روی", "آب", "پرت", "کرد"],
+    correctFa: ["لیلا", "سنگ‌ها", "را", "روی", "آب", "پرت", "کرد"],
+    en: "Leila threw stones on the water.",
+    image: ""
+  },
+  {
+    fa: ["مکس", "قلعه‌ی", "شنی", "ساخت"],
+    correctFa: ["مکس", "قلعه‌ی", "شنی", "ساخت"],
+    en: "Max built a sand castle.",
+    image: ""
+  },
+  {
+    fa: ["شب", "ستاره‌ها", "در", "آسمان", "می‌درخشیدند"],
+    correctFa: ["شب", "ستاره‌ها", "در", "آسمان", "می‌درخشیدند"],
+    en: "At night, the stars were shining in the sky.",
+    image: ""
+  },
+  {
+    fa: ["مکس", "گفت", "این", "بهترین", "سفر", "دنیاست"],
+    correctFa: ["مکس", "گفت", "این", "بهترین", "سفر", "دنیاست"],
+    en: "Max said this is the best trip ever.",
+    image: ""
+  }
+],
+// مینا_و_راستگویی: [
+//   {
+//     fa: ["مینا", "عاشِقِ", "گَشتَن", "دَر", "جَنگَل", "بود"],
+//     correctFa: ["مینا", "عاشِقِ", "گَشتَن", "دَر", "جَنگَل", "بود"],
+//     en: "Mina loved exploring in the forest"
+//   },
+//   {
+//     fa: ["یِک", "صُبحِ", "آفـتابی", "او", "چیزِ", "بَراق", "وَ", "قِرمِزی", "دید"],
+//     correctFa: ["یِک", "صُبحِ", "آفـتابی", "او", "چیزِ", "بَراق", "وَ", "قِرمِزی", "دید"],
+//     en: "One sunny morning, she saw something shiny and red"
+//   },
+//   {
+//     fa: ["یِک", "تیـلِه‌", "قِرمِز", "زِیرِ", "نورِ", "خورشید", "می‌دِرَخشید"],
+//     correctFa: ["یِک", "تیـلِه‌", "قِرمِز", "زِیرِ", "نورِ", "خورشید", "می‌دِرَخشید"],
+//     en: "A red marble was shining under the sunlight"
+//   },
+//   {
+//     fa: ["مینا", "دِلَش", "می‌خواست", "آن", "را", "هَمیـشه", "نِگه", "دارد"],
+//     correctFa: ["مینا", "دِلَش", "می‌خواست", "آن", "را", "هَمیـشه", "نِگه", "دارد"],
+//     en: "Mina wanted to keep it forever"
+//   },
+//   {
+//     fa: ["اَمّا", "او", "یـادِ", "حَرف‌هایِ", "آقایِ", "جُغد", "اُفتاد"],
+//     correctFa: ["اَمّا", "او", "یـادِ", "حَرف‌هایِ", "آقایِ", "جُغد", "اُفتاد"],
+//     en: "But she remembered Mr. Owl’s words"
+//   },
+//   {
+//     fa: ["آقایِ", "جُغد", "گُفته", "بود", "هَمیـشه", "راست", "بِگو"],
+//     correctFa: ["آقایِ", "جُغد", "گُفته", "بود", "هَمیـشه", "راست", "بِگو"],
+//     en: "Mr. Owl had said, 'Always tell the truth'"
+//   },
+//   {
+//     fa: ["مینا", "جُلو‌تَر", "رَفت", "وَ", "آقایِ", "جُغد", "را", "دید"],
+//     correctFa: ["مینا", "جُلو‌تَر", "رَفت", "وَ", "آقایِ", "جُغد", "را", "دید"],
+//     en: "Mina walked ahead and saw Mr. Owl"
+//   },
+//   {
+//     fa: ["مینا", "گُفت", "صُبح", "بِخیر", "آقایِ", "جُغد"],
+//     correctFa: ["مینا", "گُفت", "صُبح", "بِخیر", "آقایِ", "جُغد"],
+//     en: "Mina said, 'Good morning, Mr. Owl!'"
+//   },
+//   {
+//     fa: ["او", "تیـلِه", "را", "بالا", "گِرِفت", "تا", "نور", "رویِ", "آن", "بَتابَد"],
+//     correctFa: ["او", "تیـلِه", "را", "بالا", "گِرِفت", "تا", "نور", "رویِ", "آن", "بَتابَد"],
+//     en: "She held up the marble so the light would shine on it"
+//   },
+//   {
+//     fa: ["آقایِ", "جُغد", "پُرسید", "آن", "را", "اَز", "کُجا", "پِیدا", "کَردی"],
+//     correctFa: ["آقایِ", "جُغد", "پُرسید", "آن", "را", "اَز", "کُجا", "پِیدا", "کَردی"],
+//     en: "Mr. Owl asked, 'Where did you find it?'"
+//   },
+//   {
+//     fa: ["مینا", "گُفت", "مَن", "آن", "را", "رویِ", "زَمین", "پِیدا", "کَردَم"],
+//     correctFa: ["مینا", "گُفت", "مَن", "آن", "را", "رویِ", "زَمین", "پِیدا", "کَردَم"],
+//     en: "Mina said, 'I found it on the ground'"
+//   },
+//   {
+//     fa: ["آقایِ", "جُغد", "گُفت", "آفَرین", "مینا", "راست‌گُویی", "کارِ", "دُرُستی", "اَست"],
+//     correctFa: ["آقایِ", "جُغد", "گُفت", "آفَرین", "مینا", "راست‌گُویی", "کارِ", "دُرُستی", "اَست"],
+//     en: "Mr. Owl said, 'Well done, Mina! Telling the truth is the right thing'"
+//   },
+//   {
+//     fa: ["پِسَری", "کوچَک", "بِه", "نامِ", "حَسَن", "با", "نِگَرانی", "آمَد"],
+//     correctFa: ["پِسَری", "کوچَک", "بِه", "نامِ", "حَسَن", "با", "نِگَرانی", "آمَد"],
+//     en: "A little boy named Hasan came with worry"
+//   },
+//   {
+//     fa: ["او", "گُفت", "تیـلِه‌", "قِرمِزَم", "را", "گُم", "کَرده‌اَم"],
+//     correctFa: ["او", "گُفت", "تیـلِه‌", "قِرمِزَم", "را", "گُم", "کَرده‌اَم"],
+//     en: "He said, 'I lost my red marble'"
+//   },
+//   {
+//     fa: ["مینا", "تیـلِه", "را", "بِه", "حَسَن", "داد", "وَ", "اِحساسِ", "شادّی", "کَرد"],
+//     correctFa: ["مینا", "تیـلِه", "را", "بِه", "حَسَن", "داد", "وَ", "اِحساسِ", "شادّی", "کَرد"],
+//     en: "Mina gave the marble to Hasan and felt happy"
+//   }
+// ],
+
+
   };
 
   const categories = Object.keys(sentenceData);
+
   const [category, setCategory] = useState(categories[0]);
   const [sentenceIndex, setSentenceIndex] = useState(0);
-  const [words, setWords] = useState(() =>
-    shuffleArray(sentenceData[categories[0]][0].fa)
+  const [words, setWords] = useState(
+    shuffleArray(sentenceData[category][0].fa)
   );
   const [hasDragged, setHasDragged] = useState(false);
+  const [draggedIndex, setDraggedIndex] = useState(null);
   const [showCorrect, setShowCorrect] = useState(false);
-  const [showCategories, setShowCategories] = useState(true);
-
-  // هر بار دسته یا شماره جمله تغییر کرد، لیست کلمات جدید (شافل) بذار
-  useEffect(() => {
-    setWords(shuffleArray(sentenceData[category][sentenceIndex].fa));
-    setHasDragged(false);
-    setShowCorrect(false);
-  }, [category, sentenceIndex]);
+  const [showCategories, setShowCategories] = useState(true); // برای باز/بسته کردن فهرست
 
   const correctSentence = sentenceData[category][sentenceIndex].correctFa;
 
   const handleCategoryChange = (cat) => {
     setCategory(cat);
     setSentenceIndex(0);
-    // useEffect بالا ترتیب و شافل رو انجام می‌ده
+    setWords(shuffleArray(sentenceData[cat][0].fa));
+    setHasDragged(false);
+    setShowCorrect(false);
   };
 
   const handleNextSentence = () => {
-    const nextIndex = (sentenceIndex + 1) % sentenceData[category].length;
+    const nextIndex =
+      (sentenceIndex + 1) % sentenceData[category].length;
     setSentenceIndex(nextIndex);
+    setWords(shuffleArray(sentenceData[category][nextIndex].fa));
+    setHasDragged(false);
+    setShowCorrect(false);
   };
 
-  // این تابع توسط @hello-pangea/dnd صدا زده می‌شود
-  const onDragEnd = (result) => {
-    const { destination, source } = result;
+  const handleDragStart = (index) => setDraggedIndex(index);
 
-    // اگر مقصد یا تغییر وجود نداشت، کاری نکن
-    if (!destination) return;
-    if (destination.index === source.index) return;
-
-    const newWords = reorder(words, source.index, destination.index);
-    setWords(newWords);
+  const handleDrop = (index) => {
+    let updated = [...words];
+    const [draggedWord] = updated.splice(draggedIndex, 1);
+    updated.splice(index, 0, draggedWord);
+    setWords(updated);
+    setDraggedIndex(null);
     setHasDragged(true);
   };
 
   return (
     <div
-      className="container mt-4 p-4 rounded shadow"
-      style={{ fontFamily: "Vazir", width: "95%" }}
+      className="container mt-4 p-5 rounded shadow"
+      style={{ fontFamily: "Vazir" , width: '90%'}}
       dir="rtl"
     >
       <h4 className="mb-3">🧩 جمله‌سازی فارسی</h4>
 
-      <div className="mb-2">
+      {/* دکمه باز/بسته کردن فهرست */}
+      <div className="mb-2 ">
         <button
           className="btn btn-sm btn-secondary"
           onClick={() => setShowCategories((prev) => !prev)}
@@ -100,6 +478,7 @@ const SentenceBuilder = () => {
         </button>
       </div>
 
+      {/* فهرست دسته‌ها */}
       {showCategories && (
         <div className="mb-3 border rounded p-2 bg-light">
           {categories.map((cat) => (
@@ -116,95 +495,71 @@ const SentenceBuilder = () => {
         </div>
       )}
 
-      {/* DragDropContext و Droppable برای پشتیبانی موبایل */}
-      <DragDropContext onDragEnd={onDragEnd}>
-        <Droppable droppableId="words" direction="horizontal">
-          {(provided, snapshot) => (
+      {/* باکس کلمات */}
+      <div className="d-flex flex-wrap sm-h5 md-h3 gap-2 mb-3 justify-content-end">
+        {words.map((word, index) => {
+          let bg = "#f8f9fa";
+          let color = "#000";
+
+          if (hasDragged) {
+            if (word === correctSentence[index]) {
+              bg = "rgba(0, 255, 0, 0.2)";
+            } else {
+              bg = "rgba(255, 0, 0, 0.2)";
+            }
+          }
+
+          return (
             <div
-              ref={provided.innerRef}
-              {...provided.droppableProps}
-              className="d-flex flex-wrap h3 gap-2 mb-3 justify-content-end"
+              key={index}
+              draggable
+              onDragStart={() => handleDragStart(index)}
+              onDragOver={(e) => e.preventDefault()}
+              onDrop={() => handleDrop(index)}
+              className="px-3 py-2 rounded border"
               style={{
-                // به موبایل کمک می‌کند که اسکرول افقی داشته باشد اگر لازم باشد
-                overflowX: "auto",
-                paddingBottom: 6,
-                WebkitOverflowScrolling: "touch",
+                backgroundColor: bg,
+                color: color,
+                cursor: "grab",
+                transition: "background-color 0.5s ease",
               }}
             >
-              {words.map((word, index) => {
-                // تعیین رنگ پس‌زمینه بر اساس حالت پاسخ
-                let bg = "#f8f9fa";
-                let color = "#000";
-
-                if (hasDragged) {
-                  if (word === correctSentence[index]) {
-                    bg = "rgba(0, 255, 0, 0.18)";
-                  } else {
-                    bg = "rgba(255, 0, 0, 0.12)";
-                  }
-                }
-
-                return (
-                  <Draggable key={`${word}-${index}`} draggableId={`${word}-${index}`} index={index}>
-                    {(providedDraggable, snapshotDraggable) => (
-                      <div
-                        ref={providedDraggable.innerRef}
-                        {...providedDraggable.draggableProps}
-                        {...providedDraggable.dragHandleProps}
-                        className="px-3 py-2 rounded border text-danger sizeWord"
-                        style={{
-                          userSelect: "none",
-                          cursor: snapshotDraggable.isDragging ? "grabbing" : "grab",
-                          backgroundColor: bg,
-                          color: color,
-                          transition: "background-color 0.25s ease",
-                          margin: "4px",
-                          // merge استایل‌های داخلی کتابخانه با استایل ما
-                          ...providedDraggable.draggableProps.style,
-                        }}
-                      >
-                        {word}
-                      </div>
-                    )}
-                  </Draggable>
-                );
-              })}
-              {provided.placeholder}
+              {word}
             </div>
-          )}
-        </Droppable>
-      </DragDropContext>
+          );
+        })}
+      </div>
 
+      {/* ترجمه */}
       <div className="alert alert-light text-start" dir="ltr">
         Translation:{" "}
         <strong>{sentenceData[category][sentenceIndex].en}</strong>
       </div>
 
+      {/* نمایش جمله فعلی یا صحیح */}
       <div className="alert alert-info" style={{ minHeight: "40px" }}>
         {showCorrect
           ? `جمله صحیح: ${correctSentence.join(" ")}`
           : `جمله فعلی: ${words.join(" ")}`}
       </div>
 
+      {/* دکمه‌ها */}
       <div className="mt-3 d-flex gap-2 justify-content-end">
         <button className="btn btn-success" onClick={handleNextSentence}>
           جمله بعدی
         </button>
-        <button
+        {/* <button
           className="btn btn-warning"
           onClick={() => setShowCorrect((prev) => !prev)}
         >
           {showCorrect ? "پنهان کردن صحیح" : "نمایش صحیح"}
-        </button>
+        </button> */}
       </div>
 
+      {/* فونت */}
       <style>{`
         @import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css');
-        @media (max-width: 440px) {
-          .sizeWord { font-size: 15px }
-        }
       `}</style>
-
       <div className="text-end text-muted fs-6">SentenceBuilder</div>
     </div>
   );
