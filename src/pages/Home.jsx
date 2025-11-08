@@ -7,21 +7,28 @@ import SortableSentencesApp from "../sections/word/SortableSentencesApp";
 import DragDropQuiz from "../sections/word/DragDropQuiz";
 import SentenceObject from "../sections/word/SentenceObject";
 import ObjectSentenceGame from "../sections/alphabet/ObjectSentenceGame";
+import VideoCard from "../sections/alphabet/VideoCard";
 
 export default function Home() {
   return (<>
   <div  className="">
-    <div className="h5 container bg-info m-2 rounded text-center p-3">گروه الفبا جملات زیر را تمرین کنند و از روی 7 جمله جواب درست آن بنویسند. گروه کلمات جملات را مرتب و از روی 7 جمله درست آن بنویسند. </div>
+    <div className="h5 container bg-info m-2 rounded text-center p-3">گروه الفبا بچه ها فیلم زیر را ببینند و جملات فارسی آن را بخوانند. و از روی 6 جمله آن بنویسند. گروه کلمات داستان را بخوانند و از روی 7 خط آن بنویسند. </div>
 
 
-    {/* <StoryPage3 groupKey="alefba" wantedTitle="پیک نیک" goalGroup="" /> */}
-    {/* <SpellingGame/> */}
-    <ObjectSentenceGame/>
+    {/* <ObjectSentenceGame/> */}
     {/* <SentenceObject/> */}
+      <VideoCard
+        title="قصه کوتاه امروز"
+        description="متن فارسی داستان زیر را بخوانید."
+        videoFileName={`${process.env.PUBLIC_URL}/video/chick.mp4`}  // فقط اسم فایل ویدیوی mp4
+      />
+    <StoryPage3 groupKey="alefba" wantedTitle="دَفترِ رِضوان" goalGroup="" />
+    <SpellingGame/>
+
 
     {/* <DragDropQuiz/> */}
 
-    <SentenceBuilder/>
+    {/* <SentenceBuilder/> */}
     {/* <SortableSentencesApp/> */}
     {/* <StoryPage3 groupKey="kalemat" wantedTitle="پیک نیک" goalGroup="گروه کلمات"/> */}
     {/* <WordGameWithCategories initialCategory="وسایل مدرسه" /> */}
