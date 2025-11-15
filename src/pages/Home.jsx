@@ -12,30 +12,30 @@ import VideoCard from "../sections/alphabet/VideoCard";
 export default function Home() {
   return (<>
   <div  className="">
-    <div className="h5 container bg-info m-2 rounded text-center p-3">گروه الفبا بچه ها فیلم زیر را ببینند و جملات فارسی آن را بخوانند. و از روی 6 جمله آن بنویسند. گروه کلمات داستان را بخوانند و از روی 7 خط آن بنویسند. </div>
+    <div className="h5 container bg-info m-2 rounded text-center p-3">گروه الفبا بچه هاداستان زیر را بخوانند و از روی هفت جمله اول آن بنویسند. گروه کلمات جملات بهم ریخته پایین را مرتب کنند و از روی ترتیب درست آن یک بار بنویسند. </div>
 
 
     {/* <ObjectSentenceGame/> */}
     {/* <SentenceObject/> */}
-      <VideoCard
+      {/* <VideoCard
         title="قصه کوتاه امروز"
         description="متن فارسی داستان زیر را بخوانید."
         videoFileName={`${process.env.PUBLIC_URL}/video/chick.mp4`}  // فقط اسم فایل ویدیوی mp4
-      />
-    <StoryPage3 groupKey="alefba" wantedTitle="دَفترِ رِضوان" goalGroup="" />
-    <SpellingGame/>
+      /> */}
+    <StoryPage3 groupKey="alefba" wantedTitle="اَمـانَـتِ مینا" goalGroup="" />
+    {/* <SpellingGame/> */}
 
 
     {/* <DragDropQuiz/> */}
 
     {/* <SentenceBuilder/> */}
-    {/* <SortableSentencesApp/> */}
+    <SortableSentencesApp/>
     {/* <StoryPage3 groupKey="kalemat" wantedTitle="پیک نیک" goalGroup="گروه کلمات"/> */}
     {/* <WordGameWithCategories initialCategory="وسایل مدرسه" /> */}
 
 
 
-    <StoryPage3 groupKey="dastan" wantedTitle="زنبورها در اکوسیستم‌ها" goalGroup="گروه داستان"/>
+    {/* <StoryPage3 groupKey="dastan" wantedTitle="زنبورها در اکوسیستم‌ها" goalGroup="گروه داستان"/> */}
   </div>
 
   </>)
