@@ -18,12 +18,12 @@ export default function Home() {
 
     {/* <ObjectSentenceGame/> */}
     {/* <SentenceObject/> */}
-      {/* <VideoCard
+      <VideoCard
         title="قصه کوتاه امروز"
         description="متن فارسی داستان زیر را بخوانید."
-        videoFileName={`${process.env.PUBLIC_URL}/video/chick.mp4`}  // فقط اسم فایل ویدیوی mp4
-      /> */}
-    <StoryPage3 groupKey="alefba" wantedTitle="بازی در بَرَف" goalGroup="" />
+        videoFileName={`${process.env.PUBLIC_URL}/video/anty-1.mp4`}  // فقط اسم فایل ویدیوی mp4
+      />
+    {/* <StoryPage3 groupKey="alefba" wantedTitle="بازی در بَرف" goalGroup="" /> */}
     {/* <SpellingGame/> */}
 
 
@@ -33,7 +33,7 @@ export default function Home() {
 
     {/* <DragDropQuiz/> */}
 
-    {/* <SentenceBuilder/> */}
+    <SentenceBuilder/>
     {/* <SortableSentencesApp/> */}
     <StoryPage3 groupKey="kalemat" wantedTitle="عَلی و تَنبلی" goalGroup="گروه کلمات"/>
     {/* <WordGameWithCategories initialCategory="وسایل مدرسه" /> */}
