@@ -13,7 +13,7 @@ import TypingQAImageSlider from "../sections/word/TypingQAImageSlider";
 export default function Home() {
   return (<>
   <div  className="">
-    <div className="h5 container bg-info m-2 rounded text-center p-3">گروه الفبا : بچه ها داستان را برای شما بخوانند و تا بالای عکس را بنویسند. </div>
+    <div className="h5 container bg-info m-2 rounded text-center p-3">گروه الفبا : بچه ها فارسی داستان زیر را بخوانند و از روی 6 جمله آن بنویسند. </div>
 
 
     {/* <ObjectSentenceGame/> */}
@@ -27,7 +27,7 @@ export default function Home() {
     {/* <SpellingGame/> */}
 
 
-        <div className="h5 container m-2 rounded text-center p-1 py-3 text-light" style={{backgroundColor: " #c579dcff"}}> گروه کلمات : بچه ها از روی داستان بخوانند و خلاصه داستان را بنویسند. </div>
+        <div className="h5 container m-2 rounded text-center p-1 py-3 text-light" style={{backgroundColor: " #c579dcff"}}> گروه کلمات : جملات بهم ریخته زیر را مرتب کنند و از روی 6 جمله درست آن بنویسند. </div>
 
         {/* <TypingQAImageSlider/> */}
 
