@@ -118,9 +118,9 @@ const StoryPage = ({ title, content, vocab, qa ,goalGroup}) => {
                   </button>
                 </h2>
                 <div className={`accordion-collapse collapse ${accordionOpen === idx ? "show" : ""}`}>
-                  <div className="accordion-body" style={{ fontSize: "1.1rem", color: "rgb(136, 15, 15)" }}>
+                  {/* <div className="accordion-body" style={{ fontSize: "1.1rem", color: "rgb(136, 15, 15)" }}>
                     {item.answer}
-                  </div>
+                  </div> */}
                 </div>
               </div>
             ))}

@@ -13,29 +13,29 @@ import TypingQAImageSlider from "../sections/word/TypingQAImageSlider";
 export default function Home() {
   return (<>
   <div  className="">
-    <div className="h5 container bg-info m-2 rounded text-center p-3">گروه الفبا : بچه ها فارسی داستان زیر را بخوانند و از روی 6 جمله آن بنویسند. </div>
+    <div className="h5 container bg-info m-2 rounded text-center p-3">گروه الفبا : بچه ها داستان زیر را بخوانند و تا بالای عکس را بنویسند . گروه کلمات : از روی کلمات مترادف یک بار بنویسند و همین طور سوالات را به همراه جواب بنویسند. </div>
 
 
     {/* <ObjectSentenceGame/> */}
     {/* <SentenceObject/> */}
-      <VideoCard
+      {/* <VideoCard
         title="قصه کوتاه امروز"
         description="متن فارسی داستان زیر را بخوانید."
         videoFileName={`${process.env.PUBLIC_URL}/video/anty-1.mp4`}  // فقط اسم فایل ویدیوی mp4
-      />
-    {/* <StoryPage3 groupKey="alefba" wantedTitle="بازی در بَرف" goalGroup="" /> */}
+      /> */}
+    <StoryPage3 groupKey="alefba" wantedTitle="کَفّاش" goalGroup="" />
     {/* <SpellingGame/> */}
 
 
-        <div className="h5 container m-2 rounded text-center p-1 py-3 text-light" style={{backgroundColor: " #c579dcff"}}> گروه کلمات : جملات بهم ریخته زیر را مرتب کنند و از روی 6 جمله درست آن بنویسند. </div>
+        {/* <div className="h5 container m-2 rounded text-center p-1 py-3 text-light" style={{backgroundColor: " #c579dcff"}}> گروه کلمات : جملات بهم ریخته زیر را مرتب کنند و از روی 6 جمله درست آن بنویسند. </div> */}
 
         {/* <TypingQAImageSlider/> */}
 
     {/* <DragDropQuiz/> */}
 
-    <SentenceBuilder/>
+    {/* <SentenceBuilder/> */}
     {/* <SortableSentencesApp/> */}
-    <StoryPage3 groupKey="kalemat" wantedTitle="عَلی و تَنبلی" goalGroup="گروه کلمات"/>
+    {/* <StoryPage3 groupKey="kalemat" wantedTitle="عَلی و تَنبلی" goalGroup="گروه کلمات"/> */}
     {/* <WordGameWithCategories initialCategory="وسایل مدرسه" /> */}
 
 
