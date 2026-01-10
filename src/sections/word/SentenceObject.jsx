@@ -9,114 +9,130 @@ import {
   ListGroup,
   Form,
 } from "react-bootstrap";
+import {action4, natureQuestions} from "./DragDropQuiz";
+// console.log(action4);
+
+
+
+
+const createNewData = (dataArray = []) => {
+  if (!Array.isArray(dataArray)) return [];
+  return dataArray.map(item => ({
+    sentence: item.sentence,
+    words: [
+      { text: item.correctWord, image: item.image, translation: item.meaning }
+    ],
+  }));
+};
+// console.log(createNewData(action4.word.text));
 
 
 const lessonGroups = [
   // جلمات صبحانه
-    {
-    title: " صُبحانِه ",
-    imgSide:`${process.env.PUBLIC_URL}/images/assetWord/designPage/girlSitting.png`,
-    slides: [
-        {
-        sentence: "مَن صُبحانِه خوردَم.",
-        words: [
-            { text: "صُبحانِه", pronunciation: "sobhāne", image: "https://cdn.vectorstock.com/i/1000v/83/83/delicious-tasty-breakfast-cartoon-vector-24468383.jpg", translation: "Breakfast" },
-        ]
-        },
-        {
-        sentence: "مَن نان و پَنیر دوست دارَم.",
-        words: [
-            { text: "نان", pronunciation: "nān", image: "https://cdn.vectorstock.com/i/1000v/53/07/thanksgiving-baked-bread-cartoon-colored-clipart-vector-43185307.jpg", translation: "Bread" },
-            { text: "پَنیر", pronunciation: "panir", image: "https://img.freepik.com/premium-vector/cartoon-drawing-cheese-with-face-it_602454-7870.jpg", translation: "Cheese" },
-        ]
-        },
-        {
-        sentence: "صُبحانِه‌اَم شیر و عَسَل بود.",
-        words: [
-            { text: "صُبحانِه‌", pronunciation: "sobhāne'am", image: "https://cdn.vectorstock.com/i/1000v/83/83/delicious-tasty-breakfast-cartoon-vector-24468383.jpg", translation: "My breakfast" },
-            { text: "شیر", pronunciation: "shir", image: "https://cbx-prod.b-cdn.net/COLOURBOX62417729.jpg?width=800&height=800&quality=70", translation: "Milk" },
-            { text: "عَسل", pronunciation: "asal", image: "https://static.vecteezy.com/system/resources/previews/017/219/938/non_2x/cartoon-cute-bee-carrying-honey-dipper-to-take-honey-from-honey-pot-bee-character-illustration-png.png", translation: "Honey" },
-        ]
-        },
-        {
-        sentence: "مادَر برایَم تُخم‌مُرغ پُخت.",
-        words: [
-            { text: "تَخم‌مُرغ", pronunciation: "tokhm-e morgh", image:"https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://media.easy-peasy.ai/509fefb5-bf9c-42d5-934a-0425d8612e11/eadbd16b-14a1-4191-809e-34232364e071.png" , translation: "Egg" },
-        ]
-        },
-        {
-        sentence: "مَن با خواهَرَم صُبحانِه خوردم.",
-        words: [
-        ]
-        },
-        {
-        sentence: "صُبح زود چای خوردَم.",
-        words: [
-            { text: "چای", pronunciation: "chāy", image: "https://img.freepik.com/premium-vector/cartoon-illustration-cup-tea-with-smiley-face_180868-3002.jpg?w=360", translation: "Tea" },
-        ]
-        },
-        {
-        sentence: "دوست دارم نان و مُرَبا بُخورَم.",
-        words: [
-            { text: "نان", pronunciation: "nān", image: "https://cdn.vectorstock.com/i/1000v/53/07/thanksgiving-baked-bread-cartoon-colored-clipart-vector-43185307.jpg", translation: "Bread" },
-            { text: "مُرَبا", pronunciation: "marbā", image: "https://icon2.cleanpng.com/ci2/gzz/iut/aqru265v3.webp", translation: "Jam" },
-        ]
-        },
-        {
-        sentence: "صُبحانِه مُهم اَست.",
-        words: [
-        ]
-        },
-        {
-        sentence: "بابا نان خَرید.",
-        words: [
-            { text: "نان", pronunciation: "nān", image: "https://cdn.vectorstock.com/i/1000v/53/07/thanksgiving-baked-bread-cartoon-colored-clipart-vector-43185307.jpg", translation: "Bread" },
-        ]
-        },
-        {
-        sentence: "مَن خُرما و شیر دوست دارَم.",
-        words: [
-            { text: "خُرما", pronunciation: "kharmā", image: "https://img.freepik.com/premium-photo/dates-2d-vector-illustration-cartoon-white-background-h_889056-22146.jpg", translation: "Date" },
-            { text: "شیر", pronunciation: "shir", image: "https://cbx-prod.b-cdn.net/COLOURBOX62417729.jpg?width=800&height=800&quality=70", translation: "Milk" },
-        ]
-        },
-        {
-        sentence: "هَر روز صُبح شیر می‌نوشَم.",
-        words: [
-            { text: "شیر", pronunciation: "shir", image: "https://cbx-prod.b-cdn.net/COLOURBOX62417729.jpg?width=800&height=800&quality=70", translation: "Milk" },
-        ]
-        },
-        {
-        sentence: "بیسکُویت و ماست خوردَم.",
-        words: [
-            { text: "بیسکُویت", pronunciation: "biskuit", image: "https://i.pinimg.com/736x/bb/7c/29/bb7c293a568df9297ba03933f50380f0.jpg", translation: "Biscuit" },
-            { text: "ماست", pronunciation: "māst", image: "https://www.shutterstock.com/image-vector/spoon-yogurt-vector-illustration-600nw-1396014698.jpg", translation: "Yogurt" },
-        ]
-        },
-        {
-        sentence: "مَن با دوست‌هایَم صُبحانِه خوردَم.",
-        words: [
-            { text: "صُبحانِه", pronunciation: "sobhāne", image: "https://cdn.vectorstock.com/i/1000v/83/83/delicious-tasty-breakfast-cartoon-vector-24468383.jpg", translation: "Breakfast" },
-        ]
-        },
-        {
-        sentence: "صُبحانِه‌اَم خُوشمَزه بود.",
-        words: [
-        ]
-        },
-        {
-        sentence: "اِمروز کَره وَ عَسَل خوردَم.",
-        words: [
-            { text: "کَرِه", pronunciation: "koreh", image: "https://thumbs.dreamstime.com/z/cartoon-butter-cutting-board-margarine-spread-natural-dairy-product-vector-brick-wooden-high-calorie-food-cooking-225918083.jpg", translation: "Butter" },
-            { text: "عَسَل", pronunciation: "asal", image: "https://t4.ftcdn.net/jpg/06/12/86/49/360_F_612864989_v6TrLkbttR4sjm9vj7bMvtTxO7Xw4ZXY.jpg", translation: "Honey" },
-        ]
-        }
-    ]
-    },
+    // {
+    // title: " صُبحانِه ",
+    // imgSide:"/images/assetWord/girlSitting.png",
+    // slides: [
+    //     {
+    //     sentence: "مَن صُبحانِه خوردَم.",
+    //     words: [
+    //         { text: "صُبحانِه", pronunciation: "sobhāne", image: "https://cdn.vectorstock.com/i/1000v/83/83/delicious-tasty-breakfast-cartoon-vector-24468383.jpg", translation: "Breakfast" },
+    //     ]
+    //     },
+    //     {
+    //     sentence: "مَن نان و پَنیر دوست دارَم.",
+    //     words: [
+    //         { text: "نان", pronunciation: "nān", image: "https://cdn.vectorstock.com/i/1000v/53/07/thanksgiving-baked-bread-cartoon-colored-clipart-vector-43185307.jpg", translation: "Bread" },
+    //         { text: "پَنیر", pronunciation: "panir", image: "https://img.freepik.com/premium-vector/cartoon-drawing-cheese-with-face-it_602454-7870.jpg", translation: "Cheese" },
+    //     ]
+    //     },
+    //     {
+    //     sentence: "صُبحانِه‌اَم شیر و عَسَل بود.",
+    //     words: [
+    //         { text: "صُبحانِه‌", pronunciation: "sobhāne'am", image: "https://cdn.vectorstock.com/i/1000v/83/83/delicious-tasty-breakfast-cartoon-vector-24468383.jpg", translation: "My breakfast" },
+    //         { text: "شیر", pronunciation: "shir", image: "https://cbx-prod.b-cdn.net/COLOURBOX62417729.jpg?width=800&height=800&quality=70", translation: "Milk" },
+    //         { text: "عَسل", pronunciation: "asal", image: "https://static.vecteezy.com/system/resources/previews/017/219/938/non_2x/cartoon-cute-bee-carrying-honey-dipper-to-take-honey-from-honey-pot-bee-character-illustration-png.png", translation: "Honey" },
+    //     ]
+    //     },
+    //     {
+    //     sentence: "مادَر برایَم تُخم‌مُرغ پُخت.",
+    //     words: [
+    //         { text: "تَخم‌مُرغ", pronunciation: "tokhm-e morgh", image:"https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://media.easy-peasy.ai/509fefb5-bf9c-42d5-934a-0425d8612e11/eadbd16b-14a1-4191-809e-34232364e071.png" , translation: "Egg" },
+    //     ]
+    //     },
+    //     {
+    //     sentence: "مَن با خواهَرَم صُبحانِه خوردم.",
+    //     words: [
+    //     ]
+    //     },
+    //     {
+    //     sentence: "صُبح زود چای خوردَم.",
+    //     words: [
+    //         { text: "چای", pronunciation: "chāy", image: "https://img.freepik.com/premium-vector/cartoon-illustration-cup-tea-with-smiley-face_180868-3002.jpg?w=360", translation: "Tea" },
+    //     ]
+    //     },
+    //     {
+    //     sentence: "دوست دارم نان و مُرَبا بُخورَم.",
+    //     words: [
+    //         { text: "نان", pronunciation: "nān", image: "https://cdn.vectorstock.com/i/1000v/53/07/thanksgiving-baked-bread-cartoon-colored-clipart-vector-43185307.jpg", translation: "Bread" },
+    //         { text: "مُرَبا", pronunciation: "marbā", image: "https://icon2.cleanpng.com/ci2/gzz/iut/aqru265v3.webp", translation: "Jam" },
+    //     ]
+    //     },
+    //     {
+    //     sentence: "صُبحانِه مُهم اَست.",
+    //     words: [
+    //     ]
+    //     },
+    //     {
+    //     sentence: "بابا نان خَرید.",
+    //     words: [
+    //         { text: "نان", pronunciation: "nān", image: "https://cdn.vectorstock.com/i/1000v/53/07/thanksgiving-baked-bread-cartoon-colored-clipart-vector-43185307.jpg", translation: "Bread" },
+    //     ]
+    //     },
+    //     {
+    //     sentence: "مَن خُرما و شیر دوست دارَم.",
+    //     words: [
+    //         { text: "خُرما", pronunciation: "kharmā", image: "https://img.freepik.com/premium-photo/dates-2d-vector-illustration-cartoon-white-background-h_889056-22146.jpg", translation: "Date" },
+    //         { text: "شیر", pronunciation: "shir", image: "https://cbx-prod.b-cdn.net/COLOURBOX62417729.jpg?width=800&height=800&quality=70", translation: "Milk" },
+    //     ]
+    //     },
+    //     {
+    //     sentence: "هَر روز صُبح شیر می‌نوشَم.",
+    //     words: [
+    //         { text: "شیر", pronunciation: "shir", image: "https://cbx-prod.b-cdn.net/COLOURBOX62417729.jpg?width=800&height=800&quality=70", translation: "Milk" },
+    //     ]
+    //     },
+    //     {
+    //     sentence: "بیسکُویت و ماست خوردَم.",
+    //     words: [
+    //         { text: "بیسکُویت", pronunciation: "biskuit", image: "https://i.pinimg.com/736x/bb/7c/29/bb7c293a568df9297ba03933f50380f0.jpg", translation: "Biscuit" },
+    //         { text: "ماست", pronunciation: "māst", image: "https://www.shutterstock.com/image-vector/spoon-yogurt-vector-illustration-600nw-1396014698.jpg", translation: "Yogurt" },
+    //     ]
+    //     },
+    //     {
+    //     sentence: "مَن با دوست‌هایَم صُبحانِه خوردَم.",
+    //     words: [
+    //         { text: "صُبحانِه", pronunciation: "sobhāne", image: "https://cdn.vectorstock.com/i/1000v/83/83/delicious-tasty-breakfast-cartoon-vector-24468383.jpg", translation: "Breakfast" },
+    //     ]
+    //     },
+    //     {
+    //     sentence: "صُبحانِه‌اَم خُوشمَزه بود.",
+    //     words: [
+    //     ]
+    //     },
+    //     {
+    //     sentence: "اِمروز کَره وَ عَسَل خوردَم.",
+    //     words: [
+    //         { text: "کَرِه", pronunciation: "koreh", image: "https://thumbs.dreamstime.com/z/cartoon-butter-cutting-board-margarine-spread-natural-dairy-product-vector-brick-wooden-high-calorie-food-cooking-225918083.jpg", translation: "Butter" },
+    //         { text: "عَسَل", pronunciation: "asal", image: "https://t4.ftcdn.net/jpg/06/12/86/49/360_F_612864989_v6TrLkbttR4sjm9vj7bMvtTxO7Xw4ZXY.jpg", translation: "Honey" },
+    //     ]
+    //     }
+    // ]
+    // },
   // جملات حرف پ
     // {
     // title: "جُملات حرف پ",
-    // imgSide:`${process.env.PUBLIC_URL}/images/assetWord/designPage/girlFlower.png`,
+    // imgSide:"/images/assetWord/designPage/girlFlower.png",
     // slides: [
     //     {
     //       sentence: "پِدَر کُت پوشید.",
@@ -260,6 +276,203 @@ const lessonGroups = [
     //     }
     //   ]
     // },
+    // جملات فعالیت ها4
+    // {
+    //   title: " فعالیت 4",
+    //   imgSide:"https://static.vecteezy.com/system/resources/previews/045/880/923/non_2x/little-boy-having-good-idea-a-bubble-with-idea-lamp-sign-isolated-on-white-background-vector.jpg",
+    //   slides:createNewData(action4 || [])
+    // },
+    // طبیعت
+    {
+      title: "طبیعت",
+      imgSide:"https://toppng.com/uploads/preview/success-kid-png-11552334589rpayzs0eub.png",
+      slides:createNewData(natureQuestions || [])
+    },
+
+    // بخش های خانه
+//     {
+//   title: "خانه‌ی ما",
+//   imgSide: "/images/assetWord/house.png",
+//   slides: [
+//     {
+//       sentence: "اِین آشپَزخانه‌ی ما اَست.",
+//       words: [
+//         {
+//           text: "آشپَزخانه",
+//           pronunciation: "āshpazkhāne",
+//           image: "https://thumbs.dreamstime.com/b/vector-cartoon-kitchen-counter-appliances-furniture-set-fridge-microwave-oven-kettle-blender-stove-exhaust-cupboard-114160344.jpg",
+//           translation: "Kitchen"
+//         }
+//       ]
+//     },
+//     {
+//       sentence: "مامان دَر آشپَزخانه غَذا می‌پَزَد.",
+//       words: [
+//         {
+//           text: "آشپَزخانه",
+//           pronunciation: "āshpazkhāne",
+//           image: "https://thumbs.dreamstime.com/b/vector-cartoon-kitchen-counter-appliances-furniture-set-fridge-microwave-oven-kettle-blender-stove-exhaust-cupboard-114160344.jpg",
+//           translation: "Kitchen"
+//         }
+//       ]
+//     },
+//     {
+//       sentence: "ما دَر اتاق نِشیمَن می‌نِشینیم.",
+//       words: [
+//         {
+//           text: "اتاق نِشیمَن",
+//           pronunciation: "otāgh-e neshiman",
+//           image: "https://t4.ftcdn.net/jpg/01/58/57/41/360_F_158574152_sojV4O8PjcvOc1CsGfSeqFnb4Lx26kRp.jpg",
+//           translation: "Living Room"
+//         }
+//       ]
+//     },
+//     {
+//       sentence: "مَن دَر اتاق خواب می‌خوابَم.",
+//       words: [
+//         {
+//           text: "اتاق خواب",
+//           pronunciation: "otāgh-e khāb",
+//           image: "https://png.pngtree.com/background/20250612/original/pngtree-cartoon-kids-bedroom-with-space-theme-decor-picture-image_16652439.jpg",
+//           translation: "Bedroom"
+//         }
+//       ]
+//     },
+//     {
+//       sentence: "مَن دَر حمّام دَست‌هایم را می‌شویم.",
+//       words: [
+//         {
+//           text: "حمّام",
+//           pronunciation: "hammām",
+//           image: "https://img.freepik.com/premium-photo/bathroom-bathtub-cartoon-toilet_53876-440965.jpg",
+//           translation: "Bathroom"
+//         }
+//       ]
+//     },
+//     {
+//       sentence: "بَچّه‌ها دَر حَیاط بازی می‌کُنَند.",
+//       words: [
+//         {
+//           text: "حَیاط",
+//           pronunciation: "hayāt",
+//           image: "https://www.shutterstock.com/image-vector/scene-backyard-fence-illustration-260nw-2140989857.jpg",
+//           translation: "Yard"
+//         }
+//       ]
+//     },
+//     {
+//       sentence: "ماشین دَر گَاراج اَست.",
+//       words: [
+//         {
+//           text: "گَاراج",
+//           pronunciation: "gārāj",
+//           image: "https://img.freepik.com/premium-photo/garage-car-vehicle-cartoon_53876-403477.jpg",
+//           translation: "Garage"
+//         }
+//       ]
+//     },
+//     {
+//       sentence: "ما دَر اتاق ناهارخوری ناهار می‌خوریم.",
+//       words: [
+//         {
+//           text: "اتاق ناهارخوری",
+//           pronunciation: "otāgh-e nāhārkhorī",
+//           image: "https://img.freepik.com/premium-photo/kitchen-cartoon-vector-classic-home-dining-room-kitchen-interior-design-dining-table-fruits-refrigerator-flat-illustration_1028938-218665.jpg",
+//           translation: "Dining Room"
+//         }
+//       ]
+//     },
+//     {
+//       sentence: "راهرو بَینِ اتاق‌ها اَست.",
+//       words: [
+//         {
+//           text: "راهرو",
+//           pronunciation: "rāhro",
+//           image: "https://t3.ftcdn.net/jpg/03/34/23/42/360_F_334234241_9Q7HP4dRbrB34XWuMldzcWhFaohCpxco.jpg",
+//           translation: "Hallway"
+//         }
+//       ]
+//     },
+//     {
+//       sentence: "گُل‌ها دَر بالکن هَستَند.",
+//       words: [
+//         {
+//           text: "بالکن",
+//           pronunciation: "bālkon",
+//           image: "https://png.pngtree.com/png-vector/20240518/ourmid/pngtree-vector-image-of-a-balcony-with-flowers-png-image_12483228.png",
+//           translation: "Balcony"
+//         }
+//       ]
+//     },
+//     {
+//       sentence: "پشت‌ بام بالایِ خانه اَست.",
+//       words: [
+//         {
+//           text: "پشت‌ بام",
+//           pronunciation: "posht-e bām",
+//           image: "https://thumbs.dreamstime.com/b/cartoon-illustration-construction-worker-fixing-rooftop-worker-wearing-cartoon-illustration-construction-415619243.jpg",
+//           translation: "Roof"
+//         }
+//       ]
+//     },
+//     {
+//       sentence: "بابا دَر باغچه گُل می‌کارَد.",
+//       words: [
+//         {
+//           text: "باغچه",
+//           pronunciation: "bāghche",
+//           image: "https://thumbs.dreamstime.com/b/cartoon-garden-vegetables-fruit-trees-cartoon-garden-vegetables-like-cabbage-carrots-cauliflower-pepper-114918152.jpg",
+//           translation: "Garden"
+//         }
+//       ]
+//     },
+//     {
+//       sentence: "لِباس‌ها دَر کمد هَستَند.",
+//       words: [
+//         {
+//           text: "کمد",
+//           pronunciation: "komod",
+//           image: "https://img.freepik.com/premium-photo/wardrobe-clip-art-cartoon-illustration-isolated-white-background_15083-9269.jpg",
+//           translation: "Closet"
+//         }
+//       ]
+//     },
+//     {
+//       sentence: "مَن اَز پله‌ها بالا می‌رَوَم.",
+//       words: [
+//         {
+//           text: "پله‌ها",
+//           pronunciation: "pellehā",
+//           image: "https://img.freepik.com/premium-vector/vector-interior-with-staircase-living-room_734543-66.jpg",
+//           translation: "Stairs"
+//         }
+//       ]
+//     },
+//     {
+//       sentence: "زیرزمین خُنُک اَست.",
+//       words: [
+//         {
+//           text: "زیرزمین",
+//           pronunciation: "zir-zamin",
+//           image: "https://www.shutterstock.com/image-vector/basement-room-interior-house-storage-260nw-2447486161.jpg",
+//           translation: "Basement"
+//         }
+//       ]
+//     },
+//     {
+//       sentence: "وَسایل دَر زیرشیروانی هَستَند.",
+//       words: [
+//         {
+//           text: "زیرشیروانی",
+//           pronunciation: "zir-shirvāni",
+//           image: "https://t3.ftcdn.net/jpg/03/14/62/92/360_F_314629223_hk1iDQiUWjsvdMZwPeZLjWAVQKBhMd4u.jpg",
+//           translation: "Attic"
+//         }
+//       ]
+//     }
+//   ]
+// }
+
 
 
 ];
@@ -277,18 +490,19 @@ const SentenceObject = () => {
   const [activeGroupIndex, setActiveGroupIndex] = useState(0);
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
   const [selectedWord, setSelectedWord] = useState(null);
-  const [showSidebar, setShowSidebar] = useState(false);
+  const [showSidebar, setShowSidebar] = useState(true);
   const [mainTitle, setMainTitle] = useState("صبحانه");
-  const [imgSide, setImgSide] = useState(`${process.env.PUBLIC_URL}/images/assetWord/designPage/girlSitting.png`);
+  const [imgSide, setImgSide] = useState("/images/assetWord/girlSitting.png");
 
   // states for highlighting
   const [highlightChar, setHighlightChar] = useState("");
   const [stripDiacritics, setStripDiacritics] = useState(true);
 
-  const currentGroup = lessonGroups[activeGroupIndex];
-  const currentSlides = currentGroup.slides;
-  const currentWords = currentSlides[activeSlideIndex].words;
-
+  const currentGroup = lessonGroups[activeGroupIndex] || {};
+const currentSlides = Array.isArray(currentGroup.slides) ? currentGroup.slides : [];
+const currentWords = (currentSlides[activeSlideIndex] && Array.isArray(currentSlides[activeSlideIndex].words))
+  ? currentSlides[activeSlideIndex].words
+  : [];
   const handleGroupSelect = (index, i,imgS) => {
     setMainTitle(i);
     setImgSide(imgS);
@@ -314,6 +528,29 @@ const SentenceObject = () => {
     return ch === highlightChar;
   };
 
+  // render متن با هایلایت کردن کاراکترهایی که تطابق دارند
+  const highlightText = (text) => {
+    // اگر خالی است، فقط متن ساده برگردان
+    if (!text) return text;
+
+    // تبدیل به آرایه کاراکترها (در صورت نیاز می‌توان grapheme clustering پیچیده‌تری اضافه کرد)
+    const chars = Array.from(text);
+    return chars.map((ch, idx) => {
+      const should = charMatches(ch);
+      if (should) {
+        return (
+          <span
+            key={idx}
+            style={{ color: "red", fontWeight: "700" }}
+            aria-label={`highlight-${ch}`}
+          >
+            {ch}
+          </span>
+        );
+      }
+      return <span key={idx}>{ch}</span>;
+    });
+  };
 
   return (
     <Container className="mt-4" dir="rtl" style={{ minHeight: "700px" }}>
