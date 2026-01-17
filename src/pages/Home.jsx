@@ -13,21 +13,22 @@ import TypingQAImageSlider from "../sections/word/TypingQAImageSlider";
 export default function Home() {
   return (<>
   <div  className="">
-    <div className="h5 container  m-2 rounded text-center p-3 text-light" style={{backgroundColor: " #439929"}}>گروه الفبا : بچه ها جملات زیر را بخوانند و از روی 6 جمله آن بنویسند. . </div>
+    <div className="h5 container  m-2 rounded text-center p-3 text-light" style={{backgroundColor: " #439929"}}>گروه الفبا : بچه ها کلمات مربوط به زمستان را بخوانند و با معنی انگلیسی آن یک بار بنویسند. داستان فیلم ر قسمت فارسی آن بخوانند.. . </div>
 
 
     {/* <ObjectSentenceGame/> */}
-    <SentenceObject/>
-      {/* <VideoCard
+    {/* <SentenceObject/> */}
+        <WordGameWithCategories initialCategory="زمستان" />
+      <VideoCard
         title="قصه کوتاه امروز"
         description="متن فارسی داستان زیر را بخوانید."
-        videoFileName={`${process.env.PUBLIC_URL}/video/anty-1.mp4`}  // فقط اسم فایل ویدیوی mp4
-      /> */}
-    <StoryPage3 groupKey="alefba" wantedTitle="هانا و خواب آرام" goalGroup="" />
+        videoFileName={`${process.env.PUBLIC_URL}/video/fox&crew.mp4`}  // فقط اسم فایل ویدیوی mp4
+      />
+    {/* <StoryPage3 groupKey="alefba" wantedTitle="هانا و خواب آرام" goalGroup="" /> */}
     {/* <SpellingGame/> */}
 
 
-        {/* <div className="h5 container m-2 rounded text-center p-1 py-3 text-light" style={{backgroundColor: " #c579dcff"}}> گروه کلمات : بچه ها داستان زیر را بخوانند و کلمات مترادف را به همراه معنی انگلیسی آن بخوانند. </div> */}
+        <div className="h5 container m-2 rounded text-center p-1 py-3 text-light" style={{backgroundColor: " #c579dcff"}}> گروه کلمات : بچه ها داستان زیر را بخوانند و با کلمات مربوط به سوال هر کدام یک جمله جدید بسازند. </div>
 
         {/* <TypingQAImageSlider/> */}
 
@@ -35,8 +36,7 @@ export default function Home() {
 
     {/* <SentenceBuilder/> */}
     {/* <SortableSentencesApp/> */}
-    {/* <StoryPage3 groupKey="kalemat" wantedTitle="یِک بویِ خُوشمَزه" goalGroup="گروه کلمات"/> */}
-    {/* <WordGameWithCategories initialCategory="وسایل مدرسه" /> */}
+    <StoryPage3 groupKey="kalemat" wantedTitle="بازا‌رِ مَحَلّی" goalGroup="گروه کلمات"/>
 
 
 
