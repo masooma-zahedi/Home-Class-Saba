@@ -13,7 +13,7 @@ import TypingQAImageSlider from "../sections/word/TypingQAImageSlider";
 export default function Home() {
   return (<>
   <div  className="">
-    <div className="h5 container  m-2 rounded text-center p-3 text-light" style={{backgroundColor: " #439929"}}>گروه الفبا : بچه ها داستان زیر را بخوانند و از روی 5 جمله اول آن بنویسند. </div>
+    <div className="h5 container  m-2 rounded text-center p-3 text-light" style={{backgroundColor: " #439929"}}>گروه الفبا: بچه ها جملات بهم ریخته داستان کمک بهتر از خنده هست را مرتب کنند و از روی 6 جمله درست آن بنوسند. </div>
 
 
     {/* <ObjectSentenceGame/> */}
@@ -24,19 +24,19 @@ export default function Home() {
         description="متن فارسی داستان زیر را بخوانید."
         videoFileName={`${process.env.PUBLIC_URL}/video/fox&crew.mp4`}  // فقط اسم فایل ویدیوی mp4
       /> */}
-    <StoryPage3 groupKey="alefba" wantedTitle="کُمَک بِهتَر اَز خَندَه‌س" goalGroup="" />
+          <SentenceBuilder/>
+    {/* <StoryPage3 groupKey="alefba" wantedTitle="کُمَک بِهتَر اَز خَندَه‌س" goalGroup="" /> */}
     {/* <SpellingGame/> */}
 
 
-        <div className="h5 container m-2 rounded text-center p-1 py-3 text-light" style={{backgroundColor: " #c579dcff"}}> گروه کلمات : بچه ها جملات بهم ریخته داستان بازار محلی را مرتب کنند و از روی 6 جمله درست آن بنوسند. </div>
+        <div className="h5 container m-2 rounded text-center p-1 py-3 text-light" style={{backgroundColor: " #c579dcff"}}> گروه کلمات : بچه ها داستان زیر را بخوانند و از روی 7 جمله آن بنویسند. </div>
 
         {/* <TypingQAImageSlider/> */}
 
     {/* <DragDropQuiz/> */}
 
-    <SentenceBuilder/>
     {/* <SortableSentencesApp/> */}
-    <StoryPage3 groupKey="kalemat" wantedTitle="بازا‌رِ مَحَلّی" goalGroup="گروه کلمات"/>
+    <StoryPage3 groupKey="kalemat" wantedTitle="بارنابی و سَدِ باحال" goalGroup="گروه کلمات"/>
 
 
 
