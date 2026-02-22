@@ -13,11 +13,11 @@ import TypingQAImageSlider from "../sections/word/TypingQAImageSlider";
 export default function Home() {
   return (<>
   <div  className="">
-    <div className="h5 container  m-2 rounded text-center p-3 text-light" style={{backgroundColor: " #439929"}}>گروه الفبا: بچه ها جملات زیر را بخوانند و از روی 6 جمله آن بنویسند. </div>
+    <div className="h5 container  m-2 rounded text-center p-3 text-light" style={{backgroundColor: " #439929"}}>گروه الفبا: بچه ها داستان زیر را بخوانند و از روی 4 جمله آن بنویسند. </div>
 
 
     {/* <ObjectSentenceGame/> */}
-    <SentenceObject/>
+    {/* <SentenceObject/> */}
         {/* <WordGameWithCategories initialCategory="زمستان" /> */}
       {/* <VideoCard
         title="قصه کوتاه امروز"
@@ -25,18 +25,18 @@ export default function Home() {
         videoFileName={`${process.env.PUBLIC_URL}/video/fox&crew.mp4`}  // فقط اسم فایل ویدیوی mp4
       /> */}
           {/* <SentenceBuilder/> */}
-    {/* <StoryPage3 groupKey="alefba" wantedTitle="پیک نیک" goalGroup="" /> */}
+    <StoryPage3 groupKey="alefba" wantedTitle="خانِهٔ مادَربُزُرگ" goalGroup="" />
     {/* <SpellingGame/> */}
 
 
-        <div className="h5 container m-2 rounded text-center p-1 py-3 text-light" style={{backgroundColor: " #c579dcff"}}> گروه کلمات : بچه ها داستان زیر را بخوانند و تا بالای عکس بنویسند. </div>
+        <div className="h5 container m-2 rounded text-center mt-4 p-1 py-3 text-light" style={{backgroundColor: " rgb(86, 134, 202)"}}> گروه کلمات : بچه ها داستان زیر را بخوانند و از روی کلمات آن با معنی انگلیسی آن یک بار بنویسند. </div>
 
         {/* <TypingQAImageSlider/> */}
 
     {/* <DragDropQuiz/> */}
 
-    <StoryPage3 groupKey="kalemat" wantedTitle="پَرَندِه‌ی آبی و سنجاب" goalGroup="گروه کلمات"/>
-    <SortableSentencesApp/>
+    <StoryPage3 groupKey="kalemat" wantedTitle="کُلاه‌فُروش" goalGroup="گروه کلمات"/>
+    {/* <SortableSentencesApp/> */}
 
 
 
