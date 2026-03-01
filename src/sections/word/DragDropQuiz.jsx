@@ -615,13 +615,106 @@ export const natureQuestions = [
     image: 'https://thumbs.dreamstime.com/b/cartoon-anime-sunset-sky-sea-landscape-background-vector-setting-sun-below-ocean-water-horizon-pink-clouds-manga-comic-408683256.jpg'
   }
 ];
+const dailyQuestions = [
+  {
+    sentence: 'خُروس با ___ به زَمین نوک می‌زَنَد.',
+    correctWord: 'نوک',
+    meaning: 'beak',
+    options: ['نوک', 'بال', 'پا'],
+    image: 'https://static.vecteezy.com/system/resources/thumbnails/059/433/853/small/wonderful-traditional-a-rooster-crowing-with-its-beak-open-professional-png.png'
+  },
+  {
+    sentence: '___ زَمین را رو‌شَن می‌کُنَد.',
+    correctWord: 'خورشید',
+    meaning: 'sun',
+    options: ['ماه', 'خورشید', 'اَبر'],
+    image: 'https://www.shutterstock.com/shutterstock/videos/1747219/thumb/1.jpg?ip=x480'
+  },
+  {
+    sentence: 'شیر خوردَن، بَدَن را ___ می‌کُنَد.',
+    correctWord: 'قَوی',
+    meaning: 'strong',
+    options: [ 'سَرد', 'کوچَک','قَوی'],
+    image: 'https://img.freepik.com/premium-vector/strong-kid-flexing-muscles-cartoon-style_635759-1712.jpg?semt=ais_hybrid&w=740&q=80'
+  },
+  {
+    sentence: 'مادَر یِک کیکِ ___ پُخت.',
+    correctWord: 'خوشمَزِه',
+    meaning: 'delicious',
+    options: ['خوشمَزِه', 'تَلخ', 'سَرد'],
+    image: 'https://cdn.vectorstock.com/i/1000v/47/90/delicious-cake-with-girl-thumbs-up-vector-8314790.jpg'
+  },
+  {
+    sentence: 'پِدَر با ___ یِک نامِه نِوِشت.',
+    correctWord: 'خودکار',
+    meaning: 'pen',
+    options: [ 'پاک‌کُن','خودکار', 'دَفتَر'],
+    image: 'https://static.vecteezy.com/system/resources/previews/065/006/993/non_2x/blue-pen-cartoon-character-writing-on-paper-with-playful-expression-and-black-gloves-illustration-vector.jpg'
+  },
+  // {
+  //   sentence: 'پِسَر خاله‌اَم یِک ___ کوچولو اَست.',
+  //   correctWord: 'نوزاد',
+  //   meaning: 'baby',
+  //   options: ['نوزاد', 'دانِش‌آموز', 'پِدَر'],
+  //   image: 'https://png.pngtree.com/png-clipart/20241129/original/pngtree-cartoon-baby-cute-illustration-png-image_17414440.png'
+  // },
+  // {
+  //   sentence: 'دیروز بَرایِ مادَرَم یِک ___ خَریدم.',
+  //   correctWord: 'کادو',
+  //   meaning: 'gift',
+  //   options: [ 'کِتاب', 'کَفش','کادو'],
+  //   image: 'https://static.vecteezy.com/system/resources/previews/022/451/716/non_2x/the-child-gives-his-mother-gift-cartoon-illustration-for-mother-s-day-or-birthday-vector.jpg'
+  // },
+  // {
+  //   sentence: 'دَریایِ آبی ___ زیادی داشت.',
+  //   correctWord: 'موج',
+  //   meaning: 'wave',
+  //   options: ['موج', 'ماهی', 'قایِق'],
+  //   image: 'https://t3.ftcdn.net/jpg/08/04/04/08/360_F_804040851_3ETNVvfH6LJJPeoFreHVkzwxzfS3h9Qf.jpg'
+  // },
+  // {
+  //   sentence: '___ یِک میوه زَرد اَست.',
+  //   correctWord: 'موز',
+  //   meaning: 'banana',
+  //   options: [ 'سیب','موز', 'هَویج'],
+  //   image: 'https://thumbs.dreamstime.com/b/cheerful-cartoon-banana-character-23357029.jpg'
+  // },
+  // {
+  //   sentence: 'مَن با ___ به مَدرِسه می‌رَوَم.',
+  //   correctWord: 'مِترو',
+  //   meaning: 'subway',
+  //   options: ['مِترو', 'دوچَرخه', 'ماشین'],
+  //   image: 'https://img.freepik.com/premium-photo/cartoon-illustration-subway-train-arriving-station_14117-1052400.jpg'
+  // },
+  // {
+  //   sentence: 'آدَم ___ پا دارَد.',
+  //   correctWord: 'دو',
+  //   meaning: 'two',
+  //   options: [ 'سِه', 'چَهار','دو'],
+  //   image: 'https://c8.alamy.com/zooms/9/aa8227e96bf14367b7decb9586b6b677/py4615.jpg'
+  // },
+  // {
+  //   sentence: 'اَمین رادیو را ___ کَرد.',
+  //   correctWord: 'رُو‌شَن',
+  //   meaning: 'turn on',
+  //   options: ['رُو‌شَن', 'خاموش', 'شِکَسته'],
+  //   image: 'https://img.freepik.com/premium-vector/flat-design-illustration-happy-young-man-listening-radio_207579-727.jpg'
+  // },
+  // {
+  //   sentence: 'یِک ___ زیبا رویِ دیوار بود.',
+  //   correctWord: 'تابلو',
+  //   meaning: 'painting',
+  //   options: [ 'پَنجَره','تابلو', 'فَرِش'],
+  //   image: 'https://media.istockphoto.com/id/545585228/vector/pictures-gallery.jpg?s=612x612&w=0&k=20&c=g5W6VxfvwIWQ7qTy0Mzi0xArS2XrxESqvEQa0KHOrvE='
+  // }
+];
 
 
 // توجه: فرض شده questions1, questions2, questions3 در همین فایل یا در بالاتر وارد شده‌اند.
 // اگر در جای دیگری هستند، آنها را ایمپورت کنید یا به صورت props ارسال کنید.
 
 const DragDropQuiz = () => {
-  const [questions, setQuestions] = useState(questions1);
+  const [questions, setQuestions] = useState(dailyQuestions);
   const [idModal, setIdModal] = useState("question1");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [droppedWord, setDroppedWord] = useState(null); // در این نسخه "کلمهٔ انتخاب‌شده"
