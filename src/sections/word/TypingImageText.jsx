@@ -1,24 +1,24 @@
 import React, { useState, useEffect, useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const TypingImageText = () => {
+const TypingImageText = ({srcImg}) => {
   const items = [
-    {
-      title: "خانواده در خیابان پاییزی",
-      imageUrl:
-        "https://thumbs.dreamstime.com/b/happy-family-walking-colorful-autumn-city-street-happy-family-walking-colorful-autumn-city-street-384103436.jpg",
-      sentences: [
-        "خَانواده‌ای شاد دَر خِیابان قَدَم می زَنَند.",
-        "پِدر وَ مادر دَستِ یِکدیگَر را گِرِفته‌اند.",
-        "هَوا خُنک و لِذّت‌بَخش است.",
-        "آنها یِک کودَک دارَند.",
-        "چَند ساختمان در آن طرف خیابان وجود دارَد.",
-        "هَمه شال گَردَن به گَردَن دَارَند.",
-        "دو دِرَخت زَرد وَ سَبز دَر کِنارِ ساختِمان وجود دارَد.",
-        "کُودَک کُلاه زَرد پُوشیده است.",
-        "پِدر عِینَک دَارَد.",
-      ],
-    },
+    // {
+    //   title: "خانواده در خیابان پاییزی",
+    //   imageUrl:
+    //     "https://thumbs.dreamstime.com/b/happy-family-walking-colorful-autumn-city-street-happy-family-walking-colorful-autumn-city-street-384103436.jpg",
+    //   sentences: [
+    //     "خَانواده‌ای شاد دَر خِیابان قَدَم می زَنَند.",
+    //     "پِدر وَ مادر دَستِ یِکدیگَر را گِرِفته‌اند.",
+    //     "هَوا خُنک و لِذّت‌بَخش است.",
+    //     "آنها یِک کودَک دارَند.",
+    //     "چَند ساختمان در آن طرف خیابان وجود دارَد.",
+    //     "هَمه شال گَردَن به گَردَن دَارَند.",
+    //     "دو دِرَخت زَرد وَ سَبز دَر کِنارِ ساختِمان وجود دارَد.",
+    //     "کُودَک کُلاه زَرد پُوشیده است.",
+    //     "پِدر عِینَک دَارَد.",
+    //   ],
+    // },
     {
       title: "بازی کودکان در پارک",
       imageUrl:
@@ -27,7 +27,7 @@ const TypingImageText = () => {
         "کودَکان دَر پارک بازی می‌کنند.",
         "سارا اَز سُرسُره پایین می‌آیَد.",
         "آسمان آبی است.",
-        "چَند درخت سَبز دیده می‌شود.",
+        "چَند درخت سَبز دیده می‌شود.",  
         "آنها شاد و خوشحال هستند.",
         "یک پَرَنده توی آسمان پَرواز می‌کُنَد.",
         "مریم وَ رضا تاب می‌خورَند.",
@@ -37,6 +37,44 @@ const TypingImageText = () => {
         "سارا با بادکُنَک می دَوَد.",
       ],
     },
+  //       {
+  // title: "سَفَر دَر فُرودگاه",
+  // imageUrl:
+  //   "https://thumbs.dreamstime.com/b/cartoon-airport-scene-featuring-travelers-various-ages-luggage-accompanied-large-passenger-airplane-adults-396595861.jpg",
+  // sentences: [
+  //   "مَردُم دَر فُرودگاه ایستاده‌اند.",
+  //   "یِک هَواپیما دَر باند قَرار دارَد.",
+  //   "خانوادِه‌ها با چَمَدان سَفَر می‌کُنَند.",
+  //   "دو کُودَک کِنار پِدَرشان راه می‌رَوَند.",
+  //   "زَنی یِک چَمِدان قِرمِز دارَد.",
+  //   "مَردی بیلیت دَر دَست دارَد.",
+  //   "مُسافِران اَز گِیت عُبور می‌کُنَند.",
+  //   "یِک کارمَند بَررِسی بار را اَنجام می‌دَهَد.",
+  //   "آسمان آبی و صاف اَست.",
+  //   "هَواپیما آمادِه‌ی پَرواز اَست.",
+  //   "هَمه بَرای سَفَر هیجان‌زَده هستند."
+  // ],
+  //   },
+//     {
+//   title: "روزِ آرام دَر روستا",
+//   imageUrl:
+//     "https://example.com/village-yard.jpg",
+//   sentences: [
+//     "یِک پِسَر‌بَچّه رویِ حَصیر دِراز کِشیده اَست.",
+//     "او کِتابِ رَنگی می‌خوانَد.",
+//     "کِتاب دَر دَستِ او باز اَست.",
+//     "یِک خُروس کِنارِ سَبَد ایستاده اَست.",
+//     "چَند تَخم‌مُرغ داخِلِ سَبَد هَست.",
+//     "یِک مَرد دَر حالِ پَشم‌چینیِ گوسپَند اَست.",
+//     "گوسپَند آرام و ساکِت اَست.",
+//     "خُوشه‌هایِ اَنگور اَز دِرَخت آویزان هَستَند.",
+//     "حِیاط بُزُرگ و روشَن اَست.",
+//     "خانه‌ای قَدیمی دَر پُشتِ حِیاط دیده می‌شَوَد.",
+//     "هَوا آفتابی و دِلپَذیر اَست.",
+//     "پِسَر‌بَچّه با آرامِش استِراحت می‌کُنَد."
+//   ],
+// }
+
   ];
 
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -119,7 +157,7 @@ const TypingImageText = () => {
   }, [finished]);
 
   return (
-    <div className="container mt-4  my-5 p-4 " style={{ fontFamily: "", height:'100vh', backgroundColor: ' #efcae156' }}>
+    <div className="container mt-4  my-5 p-4 " style={{ fontFamily: "", height:'', backgroundColor: ' #efcae156' }}>
       {/* فهرست انتخاب مجموعه */}
       <h4 style={{cursor:'pointer'}} className={` ${showTitleMe ? 'text-success text-center' : 'text-danger text-center'}  `} onClick={()=> setShowTitleMe(!showTitleMe)}>موضوع</h4>
       {showTitleMe && 
@@ -147,12 +185,12 @@ const TypingImageText = () => {
               />
               <span className="">TypingImageText</span>
             </div>
-            <div className="col-md-6 d-flex  flex-column justify-content-center">
+            <div className="col-md-6 d-flex h3  flex-column justify-content-center">
               <pre
                 style={{
                   fontFamily: " system-ui, -apple-system",
-                  fontSize: "2rem",
-                  lineHeight: "4rem",
+                  // fontSize: "1rem",
+                  lineHeight: "3rem",
                   minHeight: "8rem",
                   direction: "rtl",
                   textAlign: "right",
@@ -175,6 +213,17 @@ const TypingImageText = () => {
             </div>
           </div>
         </div>
+          {/* <div className=" text-center">
+            <div className="col-md-8 mx-auto">
+              <h6 className=" my-3 bg-info p-4 rounded">حالا شما چند جمله در مورد تصویر زیر بسازید</h6>
+                <img
+                  src={srcImg}
+                  alt={items[selectedIndex].title}
+                  className="img-fluid rounded"
+                />
+
+            </div>
+          </div> */}
     </div>
   );
 };

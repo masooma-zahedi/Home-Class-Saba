@@ -9,11 +9,12 @@ import SentenceObject from "../sections/word/SentenceObject";
 import ObjectSentenceGame from "../sections/alphabet/ObjectSentenceGame";
 import VideoCard from "../sections/alphabet/VideoCard";
 import TypingQAImageSlider from "../sections/word/TypingQAImageSlider";
+import TypingImageText from "../sections/word/TypingImageText";
 
 export default function Home() {
   return (<>
   <div  className="">
-    <div className="h5 container  m-2 rounded text-center p-3 text-light" style={{backgroundColor: " #439929"}}>بچه ها داستان زیر را بخوانند و از روی 6 جمله آن بنویسند. </div>
+    <div className="h5 container  m-2 rounded text-center p-3 text-light" style={{backgroundColor: " #439929"}}>بچه ها جملات زیر را بخوانند و از روی 5 جمله آن بنویسند. </div>
 
 
     {/* <ObjectSentenceGame/> */}
@@ -28,16 +29,17 @@ export default function Home() {
     {/* <DragDropQuiz/> */}
     {/* <StoryPage3 groupKey="alefba" wantedTitle="خانِهٔ مادَربُزُرگ" goalGroup="" /> */}
     {/* <SpellingGame/> */}
-    <StoryPage3 groupKey="kalemat" wantedTitle="گربه‌یِ بازیگوش" goalGroup=""/>
+    {/* <StoryPage3 groupKey="kalemat" wantedTitle="گربه‌یِ بازیگوش" goalGroup=""/> */}
+        <TypingImageText/>
 
 
-        {/* <div className="h5 container m-2 rounded text-center mt-4 p-1 py-3 text-light" style={{backgroundColor: " rgb(86, 134, 202)"}}> گروه کلمات : بچه ها داستان زیر را بخوانند و از روی کلمات آن با معنی انگلیسی آن یک بار بنویسند. </div> */}
+        <div className="h5 container m-2 rounded text-center mt-4 p-1 py-3 text-light" style={{backgroundColor: " rgb(86, 134, 202)"}}> گروه کلمات : بچه ها داستان زیر را بخوانند و از روی کلمات آن با معنی انگلیسی آن یک بار بنویسند. </div>
 
         {/* <TypingQAImageSlider/> */}
     {/* <StoryPage3 groupKey="alefba" wantedTitle="خانِهٔ مادَربُزُرگ" goalGroup="" /> */}
 
 
-    {/* <StoryPage3 groupKey="kalemat" wantedTitle="کُلاه‌فُروش" goalGroup="گروه کلمات"/> */}
+    <StoryPage3 groupKey="kalemat" wantedTitle="سِتارِهٔ یِ عَجیب" goalGroup="گروه کلمات"/>
     {/* <SortableSentencesApp/> */}
 
 
