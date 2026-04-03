@@ -14,7 +14,7 @@ import TypingImageText from "../sections/word/TypingImageText";
 export default function Home() {
   return (<>
   <div  className="">
-    <div className="h5 container  m-2 rounded text-center p-3 text-light" style={{backgroundColor: " #439929"}}>بچه ها جملات زیر را بخوانند و از روی 5 جمله آن بنویسند. </div>
+    <div className="h5 container  m-2 rounded text-center p-3 text-light" style={{backgroundColor: " #439929"}}>بچه ها داستان زیر را بخوانند و از روی 5 جمله آن بنویسند. </div>
 
 
     {/* <ObjectSentenceGame/> */}
@@ -29,7 +29,7 @@ export default function Home() {
     {/* <DragDropQuiz/> */}
     {/* <StoryPage3 groupKey="alefba" wantedTitle="خانِهٔ مادَربُزُرگ" goalGroup="" /> */}
     {/* <SpellingGame/> */}
-    <StoryPage3 groupKey="kalemat" wantedTitle="مَریَم و آشپَزی" goalGroup=""/>
+    <StoryPage3 groupKey="kalemat" wantedTitle="عَلی وَ سِتاره‌ها" goalGroup=""/>
         {/* <TypingImageText/> */}
 
 
@@ -39,7 +39,7 @@ export default function Home() {
     {/* <StoryPage3 groupKey="alefba" wantedTitle="خانِهٔ مادَربُزُرگ" goalGroup="" /> */}
 
 
-    <StoryPage3 groupKey="kalemat" wantedTitle="سَمورها‌ی آبی" goalGroup="گروه کلمات"/>
+    <StoryPage3 groupKey="kalemat" wantedTitle="دوستیِ واقِعی" goalGroup="گروه کلمات"/>
     {/* <SortableSentencesApp/> */}
 
 
