@@ -18,7 +18,7 @@ export default function Home() {
 
 
     {/* <ObjectSentenceGame/> */}
-    {/* <SentenceObject/> */}
+    <SentenceObject/>
         {/* <WordGameWithCategories initialCategory="زمستان" /> */}
       {/* <VideoCard
         title="قصه کوتاه امروز"
@@ -29,17 +29,16 @@ export default function Home() {
     {/* <DragDropQuiz/> */}
     {/* <StoryPage3 groupKey="alefba" wantedTitle="خانِهٔ مادَربُزُرگ" goalGroup="" /> */}
     {/* <SpellingGame/> */}
-    <StoryPage3 groupKey="kalemat" wantedTitle="عَلی وَ سِتاره‌ها" goalGroup=""/>
         {/* <TypingImageText/> */}
 
 
         <div className="h5 container m-2 rounded text-center mt-4 p-1 py-3 text-light" style={{backgroundColor: " rgb(86, 134, 202)"}}> گروه کلمات : بچه ها داستان زیر را بخوانند و از روی کلمات آن با معنی انگلیسی آن یک بار بنویسند. </div>
-
+    <StoryPage3 groupKey="kalemat" wantedTitle="سَفَرِ رایان" goalGroup=""/>
         {/* <TypingQAImageSlider/> */}
     {/* <StoryPage3 groupKey="alefba" wantedTitle="خانِهٔ مادَربُزُرگ" goalGroup="" /> */}
 
 
-    <StoryPage3 groupKey="kalemat" wantedTitle="دوستیِ واقِعی" goalGroup="گروه کلمات"/>
+    {/* <StoryPage3 groupKey="kalemat" wantedTitle="دوستیِ واقِعی" goalGroup="گروه کلمات"/> */}
     {/* <SortableSentencesApp/> */}
 
 

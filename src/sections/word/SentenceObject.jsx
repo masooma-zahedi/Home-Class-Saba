@@ -197,85 +197,85 @@ const lessonGroups = [
     // },
 // جملات حرف خ
 // (باید عکس ها را عوض کنی!!!!!)
-    // {
-    //   title: "جُملات حرف خ",
-    //   imgSide:"https://clipart-library.com/images/dc4ok8Loi.jpg",
-    //   slides: [
-    //     {
-    //       sentence: "اُستاد با میخ و تَخته میز  می سازَد.",
-    //       words: [
-    //         { text: "میخ", pronunciation: "mikh", image: "https://media.istockphoto.com/id/1202543150/vector/metal-nail-vector-isolated-illustration.jpg?s=612x612&w=0&k=20&c=eQlQVzU-TH9nZ6Mty6b54_EboRAS3lCG_k7m66KpoIQ=", translation: "Nail" },
-    //         { text: "تَخته", pronunciation: "takhte", image: "https://cbx-prod.b-cdn.net/COLOURBOX63534787.jpg?width=800&height=800&quality=70", translation: "Wood plank" },
-    //         { text: "میز", pronunciation: "mizz", image: "https://img.freepik.com/premium-vector/modern-school-desk-clipart-vector-illustration_1316704-52480.jpg", translation: "desk" }
-    //       ]
-    //     },
-    //     {
-    //       sentence: "خانِواده‌ یِ خانُم رضایی به کِنار رودخانه رَفتَند.",
-    //       words: [
-    //         { text: "خانِواده", pronunciation: "khānevāde", image: "https://img.freepik.com/premium-vector/family-consisting-parents-children-is-fishing-together-river-silly-cartoon-featuring-family-monsters-getting-into-some-mischief-home_538213-58164.jpg", translation: "Family" },
-    //         { text: "رودخانه", pronunciation: "rudkhāne", image: "https://img.freepik.com/premium-photo/cartoon-style-river-scene-with-flowing-blue-river-center-lush-green-grass-trees_1157715-15152.jpg?semt=ais_hybrid&w=740&q=80", translation: "River" }
-    //       ]
-    //     },
-    //     {
-    //       sentence: "خانه‌ ی خَرگوش زِیر دَرَخت اَست.",
-    //       words: [
-    //         { text: "خانه", pronunciation: "khāne", image: "https://img.freepik.com/premium-vector/illustration-rabbit-house-underground-farm_1323048-67345.jpg", translation: "House" },
-    //         { text: "خَرگوش", pronunciation: "khargush", image: "https://image.lexica.art/full_webp/f350c8be-9bd4-4f9d-a52c-713b358f9543", translation: "Rabbit" },
-    //       ]
-    //     },
-    //     {
-    //       sentence: "شاخِ گوزَن شِکَستِه اَست.",
-    //       words: [
-    //         { text: "شاخ", pronunciation: "shākh", image: "https://png.pngtree.com/png-vector/20230808/ourmid/pngtree-deer-horn-vector-png-image_6881711.png", translation: "Horn" },
-    //         { text: "گوزَن", pronunciation: "gavazn", image: "https://t4.ftcdn.net/jpg/05/99/27/55/360_F_599275596_6WA4IgEOgKpS0NxpEgaMv5CcItB9imDn.jpg", translation: "Deer" }
-    //       ]
-    //     },
-    //     {
-    //       sentence: "مادَر با نَخ دامَنِ دُختَر را می دوزَد.",
-    //       words: [
-    //         { text: "نَخ", pronunciation: "nakh", image: "https://img.freepik.com/premium-photo/thread-2d-cartoon-vector-illustration-white-background_889056-28927.jpg", translation: "Thread" },
-    //         { text: "دامَن", pronunciation: "dāman", image: "https://png.pngtree.com/png-clipart/20230913/original/pngtree-skirt-clipart-an-anime-style-skirt-cartoon-vector-png-image_11078179.png", translation: "Skirt" },
-    //         { text: "دُختَر", pronunciation: "dokhtar", image: "https://img.pikbest.com/png-images/20241120/muslim-girl-cartoon-character-illustration_11111864.png!sw800", translation: "Girl" }
-    //       ]
-    //     },
-    //     {
-    //       sentence: "آب دَر گَرمـا آدَم را خُنُک می کُنَد.",
-    //       words: [
-    //         { text: "آب", pronunciation: "āb", image: "https://media.istockphoto.com/id/477867499/vector/water-drop-character-holding-a-glass.jpg?s=612x612&w=0&k=20&c=j7mZW-JC4DZLhBizmfh25Wv6ra9uP8hkDYJmr1QA9vs=", translation: "Water" },
-    //         { text: "گَرمـا", pronunciation: "garmā", image: "https://previews.123rf.com/images/xiongwu5/xiongwu52206/xiongwu5220600389/187989933-too-hot-in-summer-character-heat-stroke-high-temperature-warning-hot-summer-day-vector.jpg", translation: "Heat" },
-    //         { text: "آدَم", pronunciation: "ādam", image: "https://www.shutterstock.com/image-vector/pictogram-person-cartoon-character-260nw-1058740319.jpg", translation: "Person" },
-    //         { text: "خُنُک", pronunciation: "khonok", image: "https://www.shutterstock.com/image-vector/cute-kawaii-girl-cooling-her-260nw-1992607868.jpg", translation: "Cool" }
-    //       ]
-    //     },
-    //     {
-    //       sentence: "خَروس صُبح زود آواز می‌خوانَد.",
-    //       words: [
-    //         { text: "خَروس", pronunciation: "kharus", image: "https://www.shutterstock.com/image-vector/rooster-crows-speaker-600nw-2478573723.jpg", translation: "Rooster" },
-    //         { text: "آواز", pronunciation: "āvāz", image: "https://thumbs.dreamstime.com/b/illustrated-rooster-crowing-musical-notes-emanating-its-open-beak-upward-air-vibrant-illustration-coming-397269024.jpg", translation: "Song" }
-    //       ]
-    //     },
-    //     {
-    //       sentence: "دَستِ کودک خِیلی کوچَک اَست.",
-    //       words: [
-    //         { text: "دَست", pronunciation: "dast", image: "https://static.vecteezy.com/system/resources/previews/036/133/371/non_2x/the-father-s-hand-holds-the-baby-s-hand-child-s-hand-in-dad-s-hand-illustration-vector.jpg", translation: "Hand" },
-    //         { text: "کودک", pronunciation: "koodak", image: "https://www.shutterstock.com/image-vector/baby-boy-pacifier-mouth-lying-260nw-507915088.jpg", translation: "Child" },
-    //       ]
-    //     },
-    //     {
-    //       sentence: "خَرچَنگ روی ساحِل رَفت.",
-    //       words: [
-    //         { text: "خَرچَنگ", pronunciation: "kharchang", image: "https://thumbs.dreamstime.com/b/cartoon-crab-beach-boat-playful-crab-beach-boat-background-enjoying-sunny-coastal-scene-355395720.jpg", translation: "Crab" },
-    //         { text: "ساحِل", pronunciation: "sāhel", image: "https://static.vecteezy.com/system/resources/thumbnails/006/823/045/small_2x/beach-cartoon-scenery-background-free-vector.jpg", translation: "Beach" }
-    //       ]
-    //     },
-    //     {
-    //       sentence: "کودَک با دوستَش خَندید.",
-    //       words: [
-    //         { text: " کودَک خَندید", pronunciation: "koodak", image: "https://media.istockphoto.com/id/963896642/vector/laughing-children.jpg?s=612x612&w=0&k=20&c=gTbHkFJKOsXiMMzm7qncZJMFSzLaycXq4VoY6fArzPQ=", translation: "Child" },
-    //       ]
-    //     }
-    //   ]
-    // },
+    {
+      title: "جُملات حرف خ",
+      imgSide:"https://clipart-library.com/images/dc4ok8Loi.jpg",
+      slides: [
+        {
+          sentence: "اُستاد با میخ و تَخته میز  می سازَد.",
+          words: [
+            { text: "میخ", pronunciation: "mikh", image: "https://media.istockphoto.com/id/1202543150/vector/metal-nail-vector-isolated-illustration.jpg?s=612x612&w=0&k=20&c=eQlQVzU-TH9nZ6Mty6b54_EboRAS3lCG_k7m66KpoIQ=", translation: "Nail" },
+            { text: "تَخته", pronunciation: "takhte", image: "https://cbx-prod.b-cdn.net/COLOURBOX63534787.jpg?width=800&height=800&quality=70", translation: "Wood plank" },
+            { text: "میز", pronunciation: "mizz", image: "https://img.freepik.com/premium-vector/modern-school-desk-clipart-vector-illustration_1316704-52480.jpg", translation: "desk" }
+          ]
+        },
+        {
+          sentence: "خانِواده‌ یِ خانُم رضایی به کِنار رودخانه رَفتَند.",
+          words: [
+            { text: "خانِواده", pronunciation: "khānevāde", image: "https://img.freepik.com/premium-vector/family-consisting-parents-children-is-fishing-together-river-silly-cartoon-featuring-family-monsters-getting-into-some-mischief-home_538213-58164.jpg", translation: "Family" },
+            { text: "رودخانه", pronunciation: "rudkhāne", image: "https://img.freepik.com/premium-photo/cartoon-style-river-scene-with-flowing-blue-river-center-lush-green-grass-trees_1157715-15152.jpg?semt=ais_hybrid&w=740&q=80", translation: "River" }
+          ]
+        },
+        {
+          sentence: "خانه‌ ی خَرگوش زِیر دَرَخت اَست.",
+          words: [
+            { text: "خانه", pronunciation: "khāne", image: "https://img.freepik.com/premium-vector/illustration-rabbit-house-underground-farm_1323048-67345.jpg", translation: "House" },
+            { text: "خَرگوش", pronunciation: "khargush", image: "https://image.lexica.art/full_webp/f350c8be-9bd4-4f9d-a52c-713b358f9543", translation: "Rabbit" },
+          ]
+        },
+        {
+          sentence: "شاخِ گوزَن شِکَستِه اَست.",
+          words: [
+            { text: "شاخ", pronunciation: "shākh", image: "https://png.pngtree.com/png-vector/20230808/ourmid/pngtree-deer-horn-vector-png-image_6881711.png", translation: "Horn" },
+            { text: "گوزَن", pronunciation: "gavazn", image: "https://t4.ftcdn.net/jpg/05/99/27/55/360_F_599275596_6WA4IgEOgKpS0NxpEgaMv5CcItB9imDn.jpg", translation: "Deer" }
+          ]
+        },
+        {
+          sentence: "مادَر با نَخ دامَنِ دُختَر را می دوزَد.",
+          words: [
+            { text: "نَخ", pronunciation: "nakh", image: "https://img.freepik.com/premium-photo/thread-2d-cartoon-vector-illustration-white-background_889056-28927.jpg", translation: "Thread" },
+            { text: "دامَن", pronunciation: "dāman", image: "https://png.pngtree.com/png-clipart/20230913/original/pngtree-skirt-clipart-an-anime-style-skirt-cartoon-vector-png-image_11078179.png", translation: "Skirt" },
+            { text: "دُختَر", pronunciation: "dokhtar", image: "https://img.pikbest.com/png-images/20241120/muslim-girl-cartoon-character-illustration_11111864.png!sw800", translation: "Girl" }
+          ]
+        },
+        {
+          sentence: "آب دَر گَرمـا آدَم را خُنُک می کُنَد.",
+          words: [
+            { text: "آب", pronunciation: "āb", image: "https://media.istockphoto.com/id/477867499/vector/water-drop-character-holding-a-glass.jpg?s=612x612&w=0&k=20&c=j7mZW-JC4DZLhBizmfh25Wv6ra9uP8hkDYJmr1QA9vs=", translation: "Water" },
+            { text: "گَرمـا", pronunciation: "garmā", image: "https://previews.123rf.com/images/xiongwu5/xiongwu52206/xiongwu5220600389/187989933-too-hot-in-summer-character-heat-stroke-high-temperature-warning-hot-summer-day-vector.jpg", translation: "Heat" },
+            { text: "آدَم", pronunciation: "ādam", image: "https://www.shutterstock.com/image-vector/pictogram-person-cartoon-character-260nw-1058740319.jpg", translation: "Person" },
+            { text: "خُنُک", pronunciation: "khonok", image: "https://www.shutterstock.com/image-vector/cute-kawaii-girl-cooling-her-260nw-1992607868.jpg", translation: "Cool" }
+          ]
+        },
+        {
+          sentence: "خَروس صُبح زود آواز می‌خوانَد.",
+          words: [
+            { text: "خَروس", pronunciation: "kharus", image: "https://www.shutterstock.com/image-vector/rooster-crows-speaker-600nw-2478573723.jpg", translation: "Rooster" },
+            { text: "آواز", pronunciation: "āvāz", image: "https://thumbs.dreamstime.com/b/illustrated-rooster-crowing-musical-notes-emanating-its-open-beak-upward-air-vibrant-illustration-coming-397269024.jpg", translation: "Song" }
+          ]
+        },
+        {
+          sentence: "دَستِ کودک خِیلی کوچَک اَست.",
+          words: [
+            { text: "دَست", pronunciation: "dast", image: "https://static.vecteezy.com/system/resources/previews/036/133/371/non_2x/the-father-s-hand-holds-the-baby-s-hand-child-s-hand-in-dad-s-hand-illustration-vector.jpg", translation: "Hand" },
+            { text: "کودک", pronunciation: "koodak", image: "https://www.shutterstock.com/image-vector/baby-boy-pacifier-mouth-lying-260nw-507915088.jpg", translation: "Child" },
+          ]
+        },
+        {
+          sentence: "خَرچَنگ روی ساحِل رَفت.",
+          words: [
+            { text: "خَرچَنگ", pronunciation: "kharchang", image: "https://thumbs.dreamstime.com/b/cartoon-crab-beach-boat-playful-crab-beach-boat-background-enjoying-sunny-coastal-scene-355395720.jpg", translation: "Crab" },
+            { text: "ساحِل", pronunciation: "sāhel", image: "https://static.vecteezy.com/system/resources/thumbnails/006/823/045/small_2x/beach-cartoon-scenery-background-free-vector.jpg", translation: "Beach" }
+          ]
+        },
+        {
+          sentence: "کودَک با دوستَش خَندید.",
+          words: [
+            { text: " کودَک خَندید", pronunciation: "koodak", image: "https://media.istockphoto.com/id/963896642/vector/laughing-children.jpg?s=612x612&w=0&k=20&c=gTbHkFJKOsXiMMzm7qncZJMFSzLaycXq4VoY6fArzPQ=", translation: "Child" },
+          ]
+        }
+      ]
+    },
     // جملات فعالیت ها4
     // {
     //   title: " فعالیت 4",
@@ -290,188 +290,188 @@ const lessonGroups = [
     // },
 
     // بخش های خانه
-    {
-  title: "خانه‌ی ما",
-  imgSide: "/images/assetWord/house.png",
-  slides: [
-    {
-      sentence: "اِین آشپَزخانه‌ی ما اَست.",
-      words: [
-        {
-          text: "آشپَزخانه",
-          pronunciation: "āshpazkhāne",
-          image: "https://thumbs.dreamstime.com/b/vector-cartoon-kitchen-counter-appliances-furniture-set-fridge-microwave-oven-kettle-blender-stove-exhaust-cupboard-114160344.jpg",
-          translation: "Kitchen"
-        }
-      ]
-    },
-    {
-      sentence: "مامان دَر آشپَزخانه غَذا می‌پَزَد.",
-      words: [
-        {
-          text: "آشپَزخانه",
-          pronunciation: "āshpazkhāne",
-          image: "https://thumbs.dreamstime.com/b/vector-cartoon-kitchen-counter-appliances-furniture-set-fridge-microwave-oven-kettle-blender-stove-exhaust-cupboard-114160344.jpg",
-          translation: "Kitchen"
-        }
-      ]
-    },
-    {
-      sentence: "ما دَر اتاق نِشیمَن می‌نِشینیم.",
-      words: [
-        {
-          text: "اتاق نِشیمَن",
-          pronunciation: "otāgh-e neshiman",
-          image: "https://t4.ftcdn.net/jpg/01/58/57/41/360_F_158574152_sojV4O8PjcvOc1CsGfSeqFnb4Lx26kRp.jpg",
-          translation: "Living Room"
-        }
-      ]
-    },
-    {
-      sentence: "مَن دَر اتاق خواب می‌خوابَم.",
-      words: [
-        {
-          text: "اتاق خواب",
-          pronunciation: "otāgh-e khāb",
-          image: "https://png.pngtree.com/background/20250612/original/pngtree-cartoon-kids-bedroom-with-space-theme-decor-picture-image_16652439.jpg",
-          translation: "Bedroom"
-        }
-      ]
-    },
-    {
-      sentence: "مَن دَر حمّام دَست‌هایم را می‌شویم.",
-      words: [
-        {
-          text: "حمّام",
-          pronunciation: "hammām",
-          image: "https://img.freepik.com/premium-photo/bathroom-bathtub-cartoon-toilet_53876-440965.jpg",
-          translation: "Bathroom"
-        }
-      ]
-    },
-    {
-      sentence: "بَچّه‌ها دَر حَیاط بازی می‌کُنَند.",
-      words: [
-        {
-          text: "حَیاط",
-          pronunciation: "hayāt",
-          image: "https://www.shutterstock.com/image-vector/scene-backyard-fence-illustration-260nw-2140989857.jpg",
-          translation: "Yard"
-        }
-      ]
-    },
-    {
-      sentence: "ماشین دَر گَاراج اَست.",
-      words: [
-        {
-          text: "گَاراج",
-          pronunciation: "gārāj",
-          image: "https://img.freepik.com/premium-photo/garage-car-vehicle-cartoon_53876-403477.jpg",
-          translation: "Garage"
-        }
-      ]
-    },
-    {
-      sentence: "ما دَر اتاق ناهارخوری ناهار می‌خوریم.",
-      words: [
-        {
-          text: "اتاق ناهارخوری",
-          pronunciation: "otāgh-e nāhārkhorī",
-          image: "https://img.freepik.com/premium-photo/kitchen-cartoon-vector-classic-home-dining-room-kitchen-interior-design-dining-table-fruits-refrigerator-flat-illustration_1028938-218665.jpg",
-          translation: "Dining Room"
-        }
-      ]
-    },
-    {
-      sentence: "راهرو بَینِ اتاق‌ها اَست.",
-      words: [
-        {
-          text: "راهرو",
-          pronunciation: "rāhro",
-          image: "https://t3.ftcdn.net/jpg/03/34/23/42/360_F_334234241_9Q7HP4dRbrB34XWuMldzcWhFaohCpxco.jpg",
-          translation: "Hallway"
-        }
-      ]
-    },
-    {
-      sentence: "گُل‌ها دَر بالکن هَستَند.",
-      words: [
-        {
-          text: "بالکن",
-          pronunciation: "bālkon",
-          image: "https://png.pngtree.com/png-vector/20240518/ourmid/pngtree-vector-image-of-a-balcony-with-flowers-png-image_12483228.png",
-          translation: "Balcony"
-        }
-      ]
-    },
-    {
-      sentence: "پشت‌ بام بالایِ خانه اَست.",
-      words: [
-        {
-          text: "پشت‌ بام",
-          pronunciation: "posht-e bām",
-          image: "https://thumbs.dreamstime.com/b/cartoon-illustration-construction-worker-fixing-rooftop-worker-wearing-cartoon-illustration-construction-415619243.jpg",
-          translation: "Roof"
-        }
-      ]
-    },
-    {
-      sentence: "بابا دَر باغچه گُل می‌کارَد.",
-      words: [
-        {
-          text: "باغچه",
-          pronunciation: "bāghche",
-          image: "https://thumbs.dreamstime.com/b/cartoon-garden-vegetables-fruit-trees-cartoon-garden-vegetables-like-cabbage-carrots-cauliflower-pepper-114918152.jpg",
-          translation: "Garden"
-        }
-      ]
-    },
-    {
-      sentence: "لِباس‌ها دَر کمد هَستَند.",
-      words: [
-        {
-          text: "کمد",
-          pronunciation: "komod",
-          image: "https://img.freepik.com/premium-photo/wardrobe-clip-art-cartoon-illustration-isolated-white-background_15083-9269.jpg",
-          translation: "Closet"
-        }
-      ]
-    },
-    {
-      sentence: "مَن اَز پله‌ها بالا می‌رَوَم.",
-      words: [
-        {
-          text: "پله‌ها",
-          pronunciation: "pellehā",
-          image: "https://img.freepik.com/premium-vector/vector-interior-with-staircase-living-room_734543-66.jpg",
-          translation: "Stairs"
-        }
-      ]
-    },
-    {
-      sentence: "زیرزمین خُنُک اَست.",
-      words: [
-        {
-          text: "زیرزمین",
-          pronunciation: "zir-zamin",
-          image: "https://www.shutterstock.com/image-vector/basement-room-interior-house-storage-260nw-2447486161.jpg",
-          translation: "Basement"
-        }
-      ]
-    },
-    {
-      sentence: "وَسایل دَر زیرشیروانی هَستَند.",
-      words: [
-        {
-          text: "زیرشیروانی",
-          pronunciation: "zir-shirvāni",
-          image: "https://t3.ftcdn.net/jpg/03/14/62/92/360_F_314629223_hk1iDQiUWjsvdMZwPeZLjWAVQKBhMd4u.jpg",
-          translation: "Attic"
-        }
-      ]
-    }
-  ]
-}
+//     {
+//   title: "خانه‌ی ما",
+//   imgSide: "/images/assetWord/house.png",
+//   slides: [
+//     {
+//       sentence: "اِین آشپَزخانه‌ی ما اَست.",
+//       words: [
+//         {
+//           text: "آشپَزخانه",
+//           pronunciation: "āshpazkhāne",
+//           image: "https://thumbs.dreamstime.com/b/vector-cartoon-kitchen-counter-appliances-furniture-set-fridge-microwave-oven-kettle-blender-stove-exhaust-cupboard-114160344.jpg",
+//           translation: "Kitchen"
+//         }
+//       ]
+//     },
+//     {
+//       sentence: "مامان دَر آشپَزخانه غَذا می‌پَزَد.",
+//       words: [
+//         {
+//           text: "آشپَزخانه",
+//           pronunciation: "āshpazkhāne",
+//           image: "https://thumbs.dreamstime.com/b/vector-cartoon-kitchen-counter-appliances-furniture-set-fridge-microwave-oven-kettle-blender-stove-exhaust-cupboard-114160344.jpg",
+//           translation: "Kitchen"
+//         }
+//       ]
+//     },
+//     {
+//       sentence: "ما دَر اتاق نِشیمَن می‌نِشینیم.",
+//       words: [
+//         {
+//           text: "اتاق نِشیمَن",
+//           pronunciation: "otāgh-e neshiman",
+//           image: "https://t4.ftcdn.net/jpg/01/58/57/41/360_F_158574152_sojV4O8PjcvOc1CsGfSeqFnb4Lx26kRp.jpg",
+//           translation: "Living Room"
+//         }
+//       ]
+//     },
+//     {
+//       sentence: "مَن دَر اتاق خواب می‌خوابَم.",
+//       words: [
+//         {
+//           text: "اتاق خواب",
+//           pronunciation: "otāgh-e khāb",
+//           image: "https://png.pngtree.com/background/20250612/original/pngtree-cartoon-kids-bedroom-with-space-theme-decor-picture-image_16652439.jpg",
+//           translation: "Bedroom"
+//         }
+//       ]
+//     },
+//     {
+//       sentence: "مَن دَر حمّام دَست‌هایم را می‌شویم.",
+//       words: [
+//         {
+//           text: "حمّام",
+//           pronunciation: "hammām",
+//           image: "https://img.freepik.com/premium-photo/bathroom-bathtub-cartoon-toilet_53876-440965.jpg",
+//           translation: "Bathroom"
+//         }
+//       ]
+//     },
+//     {
+//       sentence: "بَچّه‌ها دَر حَیاط بازی می‌کُنَند.",
+//       words: [
+//         {
+//           text: "حَیاط",
+//           pronunciation: "hayāt",
+//           image: "https://www.shutterstock.com/image-vector/scene-backyard-fence-illustration-260nw-2140989857.jpg",
+//           translation: "Yard"
+//         }
+//       ]
+//     },
+//     {
+//       sentence: "ماشین دَر گَاراج اَست.",
+//       words: [
+//         {
+//           text: "گَاراج",
+//           pronunciation: "gārāj",
+//           image: "https://img.freepik.com/premium-photo/garage-car-vehicle-cartoon_53876-403477.jpg",
+//           translation: "Garage"
+//         }
+//       ]
+//     },
+//     {
+//       sentence: "ما دَر اتاق ناهارخوری ناهار می‌خوریم.",
+//       words: [
+//         {
+//           text: "اتاق ناهارخوری",
+//           pronunciation: "otāgh-e nāhārkhorī",
+//           image: "https://img.freepik.com/premium-photo/kitchen-cartoon-vector-classic-home-dining-room-kitchen-interior-design-dining-table-fruits-refrigerator-flat-illustration_1028938-218665.jpg",
+//           translation: "Dining Room"
+//         }
+//       ]
+//     },
+//     {
+//       sentence: "راهرو بَینِ اتاق‌ها اَست.",
+//       words: [
+//         {
+//           text: "راهرو",
+//           pronunciation: "rāhro",
+//           image: "https://t3.ftcdn.net/jpg/03/34/23/42/360_F_334234241_9Q7HP4dRbrB34XWuMldzcWhFaohCpxco.jpg",
+//           translation: "Hallway"
+//         }
+//       ]
+//     },
+//     {
+//       sentence: "گُل‌ها دَر بالکن هَستَند.",
+//       words: [
+//         {
+//           text: "بالکن",
+//           pronunciation: "bālkon",
+//           image: "https://png.pngtree.com/png-vector/20240518/ourmid/pngtree-vector-image-of-a-balcony-with-flowers-png-image_12483228.png",
+//           translation: "Balcony"
+//         }
+//       ]
+//     },
+//     {
+//       sentence: "پشت‌ بام بالایِ خانه اَست.",
+//       words: [
+//         {
+//           text: "پشت‌ بام",
+//           pronunciation: "posht-e bām",
+//           image: "https://thumbs.dreamstime.com/b/cartoon-illustration-construction-worker-fixing-rooftop-worker-wearing-cartoon-illustration-construction-415619243.jpg",
+//           translation: "Roof"
+//         }
+//       ]
+//     },
+//     {
+//       sentence: "بابا دَر باغچه گُل می‌کارَد.",
+//       words: [
+//         {
+//           text: "باغچه",
+//           pronunciation: "bāghche",
+//           image: "https://thumbs.dreamstime.com/b/cartoon-garden-vegetables-fruit-trees-cartoon-garden-vegetables-like-cabbage-carrots-cauliflower-pepper-114918152.jpg",
+//           translation: "Garden"
+//         }
+//       ]
+//     },
+//     {
+//       sentence: "لِباس‌ها دَر کمد هَستَند.",
+//       words: [
+//         {
+//           text: "کمد",
+//           pronunciation: "komod",
+//           image: "https://img.freepik.com/premium-photo/wardrobe-clip-art-cartoon-illustration-isolated-white-background_15083-9269.jpg",
+//           translation: "Closet"
+//         }
+//       ]
+//     },
+//     {
+//       sentence: "مَن اَز پله‌ها بالا می‌رَوَم.",
+//       words: [
+//         {
+//           text: "پله‌ها",
+//           pronunciation: "pellehā",
+//           image: "https://img.freepik.com/premium-vector/vector-interior-with-staircase-living-room_734543-66.jpg",
+//           translation: "Stairs"
+//         }
+//       ]
+//     },
+//     {
+//       sentence: "زیرزمین خُنُک اَست.",
+//       words: [
+//         {
+//           text: "زیرزمین",
+//           pronunciation: "zir-zamin",
+//           image: "https://www.shutterstock.com/image-vector/basement-room-interior-house-storage-260nw-2447486161.jpg",
+//           translation: "Basement"
+//         }
+//       ]
+//     },
+//     {
+//       sentence: "وَسایل دَر زیرشیروانی هَستَند.",
+//       words: [
+//         {
+//           text: "زیرشیروانی",
+//           pronunciation: "zir-shirvāni",
+//           image: "https://t3.ftcdn.net/jpg/03/14/62/92/360_F_314629223_hk1iDQiUWjsvdMZwPeZLjWAVQKBhMd4u.jpg",
+//           translation: "Attic"
+//         }
+//       ]
+//     }
+//   ]
+// }
 
 
 
