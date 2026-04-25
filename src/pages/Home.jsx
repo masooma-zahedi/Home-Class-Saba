@@ -27,7 +27,8 @@ export default function Home() {
       /> */}
           {/* <SentenceBuilder/> */}
     {/* <DragDropQuiz/> */}
-    <StoryPage3 groupKey="alefba" wantedTitle="صادِق و دَریا" goalGroup=" گروه الفبا " />
+    {/* <StoryPage3 groupKey="alefba" wantedTitle="صادِق و دَریا" goalGroup=" گروه الفبا " /> */}
+        <StoryPage3 groupKey="kalemat" wantedTitle="فیلِ مِهرَبان" goalGroup="گروه الفبا"/>
     {/* <SpellingGame/> */}
         {/* <TypingImageText/> */}
 
@@ -37,7 +38,7 @@ export default function Home() {
     {/* <StoryPage3 groupKey="alefba" wantedTitle="خانِهٔ مادَربُزُرگ" goalGroup="" /> */}
 
 
-    <StoryPage3 groupKey="kalemat" wantedTitle="زَهرا وَ کِتابخانه‌" goalGroup="گروه کلمات"/>
+    <StoryPage3 groupKey="kalemat" wantedTitle="شیر، خرس و روباه" goalGroup="گروه کلمات"/>
     {/* <SortableSentencesApp/> */}
 
 
