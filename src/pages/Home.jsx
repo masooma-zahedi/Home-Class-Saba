@@ -39,7 +39,7 @@ export default function Home() {
     {/* <StoryPage3 groupKey="alefba" wantedTitle="مُورچِه و کَبوتَر" goalGroup="" /> */}
 
 
-    <StoryPage3 groupKey="kalemat" wantedTitle="رُزی و دویِ تِیمی" goalGroup="گروه کلمات"/>
+    <StoryPage3 groupKey="kalemat" wantedTitle="رُزی و دویِ تیمی" goalGroup="گروه کلمات"/>
     {/* <SortableSentencesApp/> */}
 
 
