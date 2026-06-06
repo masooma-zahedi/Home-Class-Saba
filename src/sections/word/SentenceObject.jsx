@@ -197,85 +197,85 @@ const lessonGroups = [
     // },
 // جملات حرف خ
 // (باید عکس ها را عوض کنی!!!!!)
-    {
-      title: "جُملات حرف خ",
-      imgSide:"https://clipart-library.com/images/dc4ok8Loi.jpg",
-      slides: [
-        {
-          sentence: "اُستاد با میخ و تَخته میز  می سازَد.",
-          words: [
-            { text: "میخ", pronunciation: "mikh", image: "https://media.istockphoto.com/id/1202543150/vector/metal-nail-vector-isolated-illustration.jpg?s=612x612&w=0&k=20&c=eQlQVzU-TH9nZ6Mty6b54_EboRAS3lCG_k7m66KpoIQ=", translation: "Nail" },
-            { text: "تَخته", pronunciation: "takhte", image: "https://cbx-prod.b-cdn.net/COLOURBOX63534787.jpg?width=800&height=800&quality=70", translation: "Wood plank" },
-            { text: "میز", pronunciation: "mizz", image: "https://img.freepik.com/premium-vector/modern-school-desk-clipart-vector-illustration_1316704-52480.jpg", translation: "desk" }
-          ]
-        },
-        {
-          sentence: "خانِواده‌ یِ خانُم رضایی به کِنار رودخانه رَفتَند.",
-          words: [
-            { text: "خانِواده", pronunciation: "khānevāde", image: "https://img.freepik.com/premium-vector/family-consisting-parents-children-is-fishing-together-river-silly-cartoon-featuring-family-monsters-getting-into-some-mischief-home_538213-58164.jpg", translation: "Family" },
-            { text: "رودخانه", pronunciation: "rudkhāne", image: "https://img.freepik.com/premium-photo/cartoon-style-river-scene-with-flowing-blue-river-center-lush-green-grass-trees_1157715-15152.jpg?semt=ais_hybrid&w=740&q=80", translation: "River" }
-          ]
-        },
-        {
-          sentence: "خانه‌ ی خَرگوش زِیر دَرَخت اَست.",
-          words: [
-            { text: "خانه", pronunciation: "khāne", image: "https://img.freepik.com/premium-vector/illustration-rabbit-house-underground-farm_1323048-67345.jpg", translation: "House" },
-            { text: "خَرگوش", pronunciation: "khargush", image: "https://image.lexica.art/full_webp/f350c8be-9bd4-4f9d-a52c-713b358f9543", translation: "Rabbit" },
-          ]
-        },
-        {
-          sentence: "شاخِ گوزَن شِکَستِه اَست.",
-          words: [
-            { text: "شاخ", pronunciation: "shākh", image: "https://png.pngtree.com/png-vector/20230808/ourmid/pngtree-deer-horn-vector-png-image_6881711.png", translation: "Horn" },
-            { text: "گوزَن", pronunciation: "gavazn", image: "https://t4.ftcdn.net/jpg/05/99/27/55/360_F_599275596_6WA4IgEOgKpS0NxpEgaMv5CcItB9imDn.jpg", translation: "Deer" }
-          ]
-        },
-        {
-          sentence: "مادَر با نَخ دامَنِ دُختَر را می دوزَد.",
-          words: [
-            { text: "نَخ", pronunciation: "nakh", image: "https://img.freepik.com/premium-photo/thread-2d-cartoon-vector-illustration-white-background_889056-28927.jpg", translation: "Thread" },
-            { text: "دامَن", pronunciation: "dāman", image: "https://png.pngtree.com/png-clipart/20230913/original/pngtree-skirt-clipart-an-anime-style-skirt-cartoon-vector-png-image_11078179.png", translation: "Skirt" },
-            { text: "دُختَر", pronunciation: "dokhtar", image: "https://img.pikbest.com/png-images/20241120/muslim-girl-cartoon-character-illustration_11111864.png!sw800", translation: "Girl" }
-          ]
-        },
-        {
-          sentence: "آب دَر گَرمـا آدَم را خُنُک می کُنَد.",
-          words: [
-            { text: "آب", pronunciation: "āb", image: "https://media.istockphoto.com/id/477867499/vector/water-drop-character-holding-a-glass.jpg?s=612x612&w=0&k=20&c=j7mZW-JC4DZLhBizmfh25Wv6ra9uP8hkDYJmr1QA9vs=", translation: "Water" },
-            { text: "گَرمـا", pronunciation: "garmā", image: "https://previews.123rf.com/images/xiongwu5/xiongwu52206/xiongwu5220600389/187989933-too-hot-in-summer-character-heat-stroke-high-temperature-warning-hot-summer-day-vector.jpg", translation: "Heat" },
-            { text: "آدَم", pronunciation: "ādam", image: "https://www.shutterstock.com/image-vector/pictogram-person-cartoon-character-260nw-1058740319.jpg", translation: "Person" },
-            { text: "خُنُک", pronunciation: "khonok", image: "https://www.shutterstock.com/image-vector/cute-kawaii-girl-cooling-her-260nw-1992607868.jpg", translation: "Cool" }
-          ]
-        },
-        {
-          sentence: "خَروس صُبح زود آواز می‌خوانَد.",
-          words: [
-            { text: "خَروس", pronunciation: "kharus", image: "https://www.shutterstock.com/image-vector/rooster-crows-speaker-600nw-2478573723.jpg", translation: "Rooster" },
-            { text: "آواز", pronunciation: "āvāz", image: "https://thumbs.dreamstime.com/b/illustrated-rooster-crowing-musical-notes-emanating-its-open-beak-upward-air-vibrant-illustration-coming-397269024.jpg", translation: "Song" }
-          ]
-        },
-        {
-          sentence: "دَستِ کودک خِیلی کوچَک اَست.",
-          words: [
-            { text: "دَست", pronunciation: "dast", image: "https://static.vecteezy.com/system/resources/previews/036/133/371/non_2x/the-father-s-hand-holds-the-baby-s-hand-child-s-hand-in-dad-s-hand-illustration-vector.jpg", translation: "Hand" },
-            { text: "کودک", pronunciation: "koodak", image: "https://www.shutterstock.com/image-vector/baby-boy-pacifier-mouth-lying-260nw-507915088.jpg", translation: "Child" },
-          ]
-        },
-        {
-          sentence: "خَرچَنگ روی ساحِل رَفت.",
-          words: [
-            { text: "خَرچَنگ", pronunciation: "kharchang", image: "https://thumbs.dreamstime.com/b/cartoon-crab-beach-boat-playful-crab-beach-boat-background-enjoying-sunny-coastal-scene-355395720.jpg", translation: "Crab" },
-            { text: "ساحِل", pronunciation: "sāhel", image: "https://static.vecteezy.com/system/resources/thumbnails/006/823/045/small_2x/beach-cartoon-scenery-background-free-vector.jpg", translation: "Beach" }
-          ]
-        },
-        {
-          sentence: "کودَک با دوستَش خَندید.",
-          words: [
-            { text: " کودَک خَندید", pronunciation: "koodak", image: "https://media.istockphoto.com/id/963896642/vector/laughing-children.jpg?s=612x612&w=0&k=20&c=gTbHkFJKOsXiMMzm7qncZJMFSzLaycXq4VoY6fArzPQ=", translation: "Child" },
-          ]
-        }
-      ]
-    },
+    // {
+    //   title: "جُملات حرف خ",
+    //   imgSide:"https://clipart-library.com/images/dc4ok8Loi.jpg",
+    //   slides: [
+    //     {
+    //       sentence: "اُستاد با میخ و تَخته میز  می سازَد.",
+    //       words: [
+    //         { text: "میخ", pronunciation: "mikh", image: "https://media.istockphoto.com/id/1202543150/vector/metal-nail-vector-isolated-illustration.jpg?s=612x612&w=0&k=20&c=eQlQVzU-TH9nZ6Mty6b54_EboRAS3lCG_k7m66KpoIQ=", translation: "Nail" },
+    //         { text: "تَخته", pronunciation: "takhte", image: "https://cbx-prod.b-cdn.net/COLOURBOX63534787.jpg?width=800&height=800&quality=70", translation: "Wood plank" },
+    //         { text: "میز", pronunciation: "mizz", image: "https://img.freepik.com/premium-vector/modern-school-desk-clipart-vector-illustration_1316704-52480.jpg", translation: "desk" }
+    //       ]
+    //     },
+    //     {
+    //       sentence: "خانِواده‌ یِ خانُم رضایی به کِنار رودخانه رَفتَند.",
+    //       words: [
+    //         { text: "خانِواده", pronunciation: "khānevāde", image: "https://img.freepik.com/premium-vector/family-consisting-parents-children-is-fishing-together-river-silly-cartoon-featuring-family-monsters-getting-into-some-mischief-home_538213-58164.jpg", translation: "Family" },
+    //         { text: "رودخانه", pronunciation: "rudkhāne", image: "https://img.freepik.com/premium-photo/cartoon-style-river-scene-with-flowing-blue-river-center-lush-green-grass-trees_1157715-15152.jpg?semt=ais_hybrid&w=740&q=80", translation: "River" }
+    //       ]
+    //     },
+    //     {
+    //       sentence: "خانه‌ ی خَرگوش زِیر دَرَخت اَست.",
+    //       words: [
+    //         { text: "خانه", pronunciation: "khāne", image: "https://img.freepik.com/premium-vector/illustration-rabbit-house-underground-farm_1323048-67345.jpg", translation: "House" },
+    //         { text: "خَرگوش", pronunciation: "khargush", image: "https://image.lexica.art/full_webp/f350c8be-9bd4-4f9d-a52c-713b358f9543", translation: "Rabbit" },
+    //       ]
+    //     },
+    //     {
+    //       sentence: "شاخِ گوزَن شِکَستِه اَست.",
+    //       words: [
+    //         { text: "شاخ", pronunciation: "shākh", image: "https://png.pngtree.com/png-vector/20230808/ourmid/pngtree-deer-horn-vector-png-image_6881711.png", translation: "Horn" },
+    //         { text: "گوزَن", pronunciation: "gavazn", image: "https://t4.ftcdn.net/jpg/05/99/27/55/360_F_599275596_6WA4IgEOgKpS0NxpEgaMv5CcItB9imDn.jpg", translation: "Deer" }
+    //       ]
+    //     },
+    //     {
+    //       sentence: "مادَر با نَخ دامَنِ دُختَر را می دوزَد.",
+    //       words: [
+    //         { text: "نَخ", pronunciation: "nakh", image: "https://img.freepik.com/premium-photo/thread-2d-cartoon-vector-illustration-white-background_889056-28927.jpg", translation: "Thread" },
+    //         { text: "دامَن", pronunciation: "dāman", image: "https://png.pngtree.com/png-clipart/20230913/original/pngtree-skirt-clipart-an-anime-style-skirt-cartoon-vector-png-image_11078179.png", translation: "Skirt" },
+    //         { text: "دُختَر", pronunciation: "dokhtar", image: "https://img.pikbest.com/png-images/20241120/muslim-girl-cartoon-character-illustration_11111864.png!sw800", translation: "Girl" }
+    //       ]
+    //     },
+    //     {
+    //       sentence: "آب دَر گَرمـا آدَم را خُنُک می کُنَد.",
+    //       words: [
+    //         { text: "آب", pronunciation: "āb", image: "https://media.istockphoto.com/id/477867499/vector/water-drop-character-holding-a-glass.jpg?s=612x612&w=0&k=20&c=j7mZW-JC4DZLhBizmfh25Wv6ra9uP8hkDYJmr1QA9vs=", translation: "Water" },
+    //         { text: "گَرمـا", pronunciation: "garmā", image: "https://previews.123rf.com/images/xiongwu5/xiongwu52206/xiongwu5220600389/187989933-too-hot-in-summer-character-heat-stroke-high-temperature-warning-hot-summer-day-vector.jpg", translation: "Heat" },
+    //         { text: "آدَم", pronunciation: "ādam", image: "https://www.shutterstock.com/image-vector/pictogram-person-cartoon-character-260nw-1058740319.jpg", translation: "Person" },
+    //         { text: "خُنُک", pronunciation: "khonok", image: "https://www.shutterstock.com/image-vector/cute-kawaii-girl-cooling-her-260nw-1992607868.jpg", translation: "Cool" }
+    //       ]
+    //     },
+    //     {
+    //       sentence: "خَروس صُبح زود آواز می‌خوانَد.",
+    //       words: [
+    //         { text: "خَروس", pronunciation: "kharus", image: "https://www.shutterstock.com/image-vector/rooster-crows-speaker-600nw-2478573723.jpg", translation: "Rooster" },
+    //         { text: "آواز", pronunciation: "āvāz", image: "https://thumbs.dreamstime.com/b/illustrated-rooster-crowing-musical-notes-emanating-its-open-beak-upward-air-vibrant-illustration-coming-397269024.jpg", translation: "Song" }
+    //       ]
+    //     },
+    //     {
+    //       sentence: "دَستِ کودک خِیلی کوچَک اَست.",
+    //       words: [
+    //         { text: "دَست", pronunciation: "dast", image: "https://static.vecteezy.com/system/resources/previews/036/133/371/non_2x/the-father-s-hand-holds-the-baby-s-hand-child-s-hand-in-dad-s-hand-illustration-vector.jpg", translation: "Hand" },
+    //         { text: "کودک", pronunciation: "koodak", image: "https://www.shutterstock.com/image-vector/baby-boy-pacifier-mouth-lying-260nw-507915088.jpg", translation: "Child" },
+    //       ]
+    //     },
+    //     {
+    //       sentence: "خَرچَنگ روی ساحِل رَفت.",
+    //       words: [
+    //         { text: "خَرچَنگ", pronunciation: "kharchang", image: "https://thumbs.dreamstime.com/b/cartoon-crab-beach-boat-playful-crab-beach-boat-background-enjoying-sunny-coastal-scene-355395720.jpg", translation: "Crab" },
+    //         { text: "ساحِل", pronunciation: "sāhel", image: "https://static.vecteezy.com/system/resources/thumbnails/006/823/045/small_2x/beach-cartoon-scenery-background-free-vector.jpg", translation: "Beach" }
+    //       ]
+    //     },
+    //     {
+    //       sentence: "کودَک با دوستَش خَندید.",
+    //       words: [
+    //         { text: " کودَک خَندید", pronunciation: "koodak", image: "https://media.istockphoto.com/id/963896642/vector/laughing-children.jpg?s=612x612&w=0&k=20&c=gTbHkFJKOsXiMMzm7qncZJMFSzLaycXq4VoY6fArzPQ=", translation: "Child" },
+    //       ]
+    //     }
+    //   ]
+    // },
     // جملات فعالیت ها4
     // {
     //   title: " فعالیت 4",
@@ -471,7 +471,78 @@ const lessonGroups = [
 //       ]
 //     }
 //   ]
-// }
+// },
+
+// پوزیشن ها 2
+{
+  title: "مکان یابی",
+  imgSide: "https://static.vecteezy.com/system/resources/previews/045/880/923/non_2x/little-boy-having-good-idea-a-bubble-with-idea-lamp-sign-isolated-on-white-background-vector.jpg",
+  slides: [
+    {
+      sentence: "کِتابِ بُزُرگ رویِ میزِ چوبی قَرار دارد.",
+      words: [
+        { text: "کِتاب", pronunciation: "ketāb", image: "https://previews.123rf.com/images/djvstock/djvstock1807/djvstock180702273/115035827-table-with-books-icon-over-white-background-vector-illustration.jpg", translation: "Book" },
+        { text: "میز", pronunciation: "miz", image: "https://t3.ftcdn.net/jpg/00/84/20/22/360_F_84202236_8ytMkN6KUdcuUlFUSSRsyZc1p05jqDuo.jpg", translation: "Table" }
+      ]
+    },
+    {
+      sentence: "گُربِه‌ی کوچَک زیرِ صَندَلی نِشَستِه است.",
+      words: [
+        { text: "گُربِه", pronunciation: "gorbe", image: "https://thumbs.dreamstime.com/b/adorable-orange-tabby-cat-peeking-out-under-table-cute-wide-eyed-bathed-warm-sunlight-410117793.jpg", translation: "Cat" },
+        { text: "صَندَلی", pronunciation: "sandali", image: "https://img.magnific.com/premium-vector/vector-cartoon-wooden-chair-white_756535-6813.jpg?semt=ais_hybrid&w=740&q=80", translation: "Chair" }
+      ]
+    },
+    {
+      sentence: "مِدادِ زَرد داخِلِ کیفِ مَدرَسِه است.",
+      words: [
+        { text: "مِداد", pronunciation: "medād", image: "https://img.magnific.com/premium-vector/school-bag-with-pencil-pen-illustration_1220218-11590.jpg", translation: "Pencil" },
+        { text: "کیف", pronunciation: "kif", image: "https://thumbs.dreamstime.com/z/blue-backpack-vector-illustration-school-bag-cartoon-art-playful-colorful-designed-to-represent-design-350581124.jpg", translation: "Bag" }
+      ]
+    },
+    {
+      sentence: "توپِ قِرمِز کِنارِ دِرَختِ بُلَند قَرار گِرِفتِه است.",
+      words: [
+        { text: "توپ", pronunciation: "tup", image: "https://thumbs.dreamstime.com/b/tree-ball-182748968.jpg", translation: "Ball" },
+      ]
+    },
+    {
+      sentence: "ماشینِ سِفید جِلویِ خانِه پارک شُدِه است.",
+      words: [
+        { text: "ماشین", pronunciation: "māshin", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7Y77Fu9XD-R27MqNg03zyaU4MCTIUGV0WeA&s", translation: "Car" },
+      ]
+    },
+    {
+      sentence: "بَچِه‌ها بیرونِ مَدرَسِه با هَم بازی می‌کُنَند.",
+      words: [
+        { text: "بَچِه‌ها", pronunciation: "bachehā", image: "https://thumbs.dreamstime.com/b/happy-school-children-playing-front-school-building-illustration-96500743.jpg", translation: "Kids" },
+      ]
+    },
+    {
+      sentence: "پَرَندِه‌ی رَنگارَنگ بالایِ دِرَخت پَرواز می‌کُنَد.",
+      words: [
+        { text: "پَرَندِه", pronunciation: "parande", image: "https://i.pinimg.com/736x/23/51/16/235116e4857d8c933a1e2c71ff664004.jpg", translation: "Bird" },
+      ]
+    },
+    {
+      sentence: "توپِ آبی بینِ دو صَندَلی قَرار دارد.",
+      words: [
+        { text: "توپ", pronunciation: "tup", image: "https://thumbs.dreamstime.com/b/beach-chairs-beach-ball-computer-ggenerated-image-53846772.jpg", translation: "Ball" },
+      ]
+    },
+    {
+      sentence: "کَفش‌ها پُشتِ دَرِ اُتاق گُذاشتِه شُدِه‌اند.",
+      words: [
+        { text: "کَفش", pronunciation: "kafsh", image: "https://www.shutterstock.com/image-illustration/many-cartoon-shoes-family-front-260nw-1795778158.jpg", translation: "Shoes" },
+      ]
+    },
+    {
+      sentence: "ما جایگیری و پوزیشِن‌ها را دَر جُملِه‌ها یاد می‌گیریم.",
+      words: [
+      ]
+    }
+  ]
+}
+
 
 
 
@@ -491,7 +562,7 @@ const SentenceObject = () => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
   const [selectedWord, setSelectedWord] = useState(null);
   const [showSidebar, setShowSidebar] = useState(true);
-  const [mainTitle, setMainTitle] = useState("صبحانه");
+  const [mainTitle, setMainTitle] = useState("مکان وسایل");
   const [imgSide, setImgSide] = useState("/images/assetWord/girlSitting.png");
 
   // states for highlighting
