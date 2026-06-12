@@ -18,7 +18,7 @@ export default function Home() {
 
 
     {/* <ObjectSentenceGame/> */}
-    <SentenceObject/>
+    {/* <SentenceObject/> */}
         {/* <WordGameWithCategories initialCategory="زمستان" /> */}
       {/* <VideoCard
         title="قصه کوتاه امروز"
@@ -29,13 +29,13 @@ export default function Home() {
     {/* <StoryPage3 groupKey="alefba" wantedTitle="چوپان دروغ‌گو" goalGroup=" گروه الفبا " /> */}
         {/* <StoryPage3 groupKey="kalemat" wantedTitle="فیلِ مِهرَبان" goalGroup="گروه الفبا"/> */}
     {/* <SpellingGame/> */}
-        {/* <TypingImageText srcImg="https://media.istockphoto.com/id/1204470108/vector/cute-kids-reading-book-and-librarian-in-library-flat-cartoon-illustration.jpg?s=612x612&w=0&k=20&c=NnfqdhoAmTMeNTBD6cvWHwc5pf8K3W-aCrbSOj9Plag="/> */}
+        <TypingImageText srcImg="https://media.istockphoto.com/id/1204470108/vector/cute-kids-reading-book-and-librarian-in-library-flat-cartoon-illustration.jpg?s=612x612&w=0&k=20&c=NnfqdhoAmTMeNTBD6cvWHwc5pf8K3W-aCrbSOj9Plag="/>
 
 
         {/* <div className="h5 container m-2 rounded text-center mt-4 p-1 py-3 text-light" style={{backgroundColor: " rgb(86, 134, 202)"}}> گروه کلمات : بچه ها داستان زیر  را بخوانند و از روی کلمات آن با معنی انگلیسی آن دو بار بنویسند. </div> */}
-        <div className="h5 container m-2 rounded text-center mt-4 p-1 py-3 text-light" style={{backgroundColor: " rgb(86, 134, 202)"}}> گروه کلمات : بچه ها جملات زیر را مرتب کنند و از روی 5 جمله آن بنویسند. </div>
+        {/* <div className="h5 container m-2 rounded text-center mt-4 p-1 py-3 text-light" style={{backgroundColor: " rgb(86, 134, 202)"}}> گروه کلمات : بچه ها جملات زیر را مرتب کنند و از روی 5 جمله آن بنویسند. </div> */}
         {/* <TypingQAImageSlider/> */}
-    <SentenceBuilder/>
+    {/* <SentenceBuilder/> */}
     <StoryPage3 groupKey="alefba" wantedTitle="چوپان دروغ‌گو" goalGroup="" />
     {/* <StoryPage3 groupKey="kalemat" wantedTitle="یِک نِگاهِ دیگَر" goalGroup="گروه کلمات"/> */}
     {/* <SortableSentencesApp/> */}
@@ -47,3 +47,4 @@ export default function Home() {
 
   </>)
 }
+
