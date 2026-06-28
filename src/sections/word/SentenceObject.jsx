@@ -825,8 +825,6 @@ const currentWords = (currentSlides[activeSlideIndex] && Array.isArray(currentSl
       `}</style>
 
 
-
-
     </Container>
   );
 };
