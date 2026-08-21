@@ -14,7 +14,7 @@ import TypingImageText from "../sections/word/TypingImageText";
 export default function Home() {
   return (<>
   <div  className="">
-    <div className="h5 container  m-2 rounded text-center p-3 text-light" style={{backgroundColor: " #992988"}}>بچه ها داستان زیر را بخوانند و از روی  کلمات آن با معنی دو بار بنویسند. </div>
+    <div className="h5 container  m-2 rounded text-center p-3 text-light" style={{backgroundColor: " #992988"}}>بچه ها جملات زیر را بخوانند و از روی  4 جمله آن بنویسند. </div>
 
 
     {/* <ObjectSentenceGame/> */}
@@ -26,18 +26,17 @@ export default function Home() {
         videoFileName={`${process.env.PUBLIC_URL}/video/elephent&ball.mp4`}  // فقط اسم فایل ویدیوی mp4
       /> */}
     {/* <DragDropQuiz/> */}
-    <StoryPage3 groupKey="alefba" wantedTitle="کِیفِ مَدرِسِه" goalGroup="  " />
         {/* <StoryPage3 groupKey="kalemat" wantedTitle="فیلِ مِهرَبان" goalGroup="گروه الفبا"/> */}
     {/* <SpellingGame/> */}
-        {/* <TypingImageText srcImg="https://media.istockphoto.com/id/1204470108/vector/cute-kids-reading-book-and-librarian-in-library-flat-cartoon-illustration.jpg?s=612x612&w=0&k=20&c=NnfqdhoAmTMeNTBD6cvWHwc5pf8K3W-aCrbSOj9Plag="/> */}
-
+        <TypingImageText srcImg="https://media.istockphoto.com/id/1204470108/vector/cute-kids-reading-book-and-librarian-in-library-flat-cartoon-illustration.jpg?s=612x612&w=0&k=20&c=NnfqdhoAmTMeNTBD6cvWHwc5pf8K3W-aCrbSOj9Plag="/>
+        <StoryPage3 groupKey="alefba" wantedTitle="باران" goalGroup="  " />
 
         <div className="h5 container m-2 rounded text-center mt-4 p-1 py-3 text-light" style={{backgroundColor: " rgb(86, 134, 202)"}}> گروه کلمات : بچه ها داستان زیر  را بخوانند و از روی کلمات آن با معنی دو بار بنویسند. </div>
         {/* <div className="h5 container m-2 rounded text-center mt-4 p-1 py-3 text-light" style={{backgroundColor: " rgb(86, 134, 202)"}}> گروه کلمات : بچه ها جملات زیر را مرتب کنند و از روی 5 جمله آن بنویسند. </div> */}
         {/* <TypingQAImageSlider/> */}
     {/* <SentenceBuilder/> */}
      {/* <StoryPage3 groupKey="alefba" wantedTitle="خانه‌یِ کوچَکِ پَرَنده‌ها" goalGroup="گروه کلمات" />  */}
-    <StoryPage3 groupKey="kalemat" wantedTitle="اَوَّلین مُسابِقِه‌یِ طاها" goalGroup="گروه کلمات"/>
+    <StoryPage3 groupKey="kalemat" wantedTitle="یِک بویِ خُوشمَزه" goalGroup="گروه کلمات"/>
     {/* <SortableSentencesApp/> */}
 
 
